@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Win32_OculusRoomTiny.cpp" />
+    <ClCompile Include="../../../OculusRoomModel.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\RenderTiny_D3D11_Device.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Win32_OculusRoomTiny_Util.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\CommonSrc\Platform\Win32_Gamepad.cpp">
+      <Filter>CommonSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\xbeep.cpp">
+      <Filter>Xbee</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Util">
+      <UniqueIdentifier>{aa2ef577-a403-4088-a39c-0a87a96151a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommonSrc">
+      <UniqueIdentifier>{0b10aa1d-2337-4b0b-942a-843ac96a682f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xbee">
+      <UniqueIdentifier>{e71322ce-ea33-4b4e-8cf0-7d573bcf8fb4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\RenderTiny_D3D11_Device.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HSWDisplay_Util.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\CommonSrc\Platform\Win32_Gamepad.h">
+      <Filter>CommonSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\xbee.h">
+      <Filter>Xbee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\xbeep.h">
+      <Filter>Xbee</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\CommonSrc\Oculus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\OculusRoomTiny2.rc" />
+  </ItemGroup>
+</Project>

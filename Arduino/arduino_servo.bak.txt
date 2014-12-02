@@ -1,0 +1,69 @@
+/***************************************************************************************
+受信したテキスト文字をキャラクタ液晶に表示するXBee子機の実験用サンプルです。
+
+                                                       Copyright (c) 2013 Wataru KUNINO
+***************************************************************************************/
+ 
+#include <xbee.h>
+#include <LiquidCrystal.h>
+
+const int HLD_001 = 0;   //DO0(HOLD)
+const int HLD_002 = 1;   //DO1(HOLD)
+const int LCD_DB7 = 2;   //DO2(LCD用)
+const int LCD_DB6 = 3;   //DO3(LCD用)
+const int LCD_DB5 = 6;   //DO6(LCD用)
+const int LCD_DB4 = 5;   //DO5(LCD用)
+const int LCD_EBL = 7;   //DO7(LCD用)
+const int LCD_RS_ = 8;   //DO8(LCD用)
+
+//LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+LiquidCrystal lcd(LCD_RS_, LCD_EBL, LCD_DB4, LCD_DB5, LCD_DB6, LCD_DB7);
+
+void setup(){
+    lcd.begin(16, 2);                               // LCDの初期化
+    lcd.clear(); lcd.print("SERVO CONTROLLER");
+    xbee_init( 0x00 );                              // XBeeの初期化
+    xbee_atcb( 4 );                                 // ネットワーク初期化
+    xbee_atnj(0);                                   // 孫機からのジョインを制限
+    lcd.setCursor(0, 1);                            // 液晶の２行目に移動
+    lcd.print("Commissioning");                     // 文字を表示
+    while( xbee_atai() > 0x01 ){                    // ネットワーク参加状況を確認
+        delay(3000);
+        xbee_atcb(1);                               // ネットワーク参加ボタンを押下
+    }
+    lcd.clear();
+} 
+
+void loop(){
+    byte i;
+    char s[34];                                     // 表示する文字列用の変数
+    byte len = 0;                                   // 表示する文字の長さ
+    XBEE_RESULT xbee_result;                        // 受信データ用
+
+    for(i=0;i<34;i++) s[i]='\0';                    // 変数sを初期化
+    byte data = xbee_rx_call( &xbee_result );
+    if( xbee_result.MODE == MODE_UART){             // UARTシリアルデータを受信
+        for(i=0;i<data;i++){                        // 受信したテキストをsに代入
+            if(isprint((char)xbee_result.DATA[i])){ // 受信文字が表示可能の時
+                s[len] = (char)xbee_result.DATA[i]; // 表示用の変数に代入
+                len++;                              // 文字数のインクリメント
+                if( len == 16) len=17;              // 2行目はs[17]～
+            }
+            if( len >= 33 ) break;                  // 32文字目でループを抜ける
+        }
+        lcd.clear();
+        lcd.print( s );                             // 受信したテキストを表示
+        lcd.setCursor(0,1);
+        lcd.print( &s[17] );                        // 受信したテキストs[17]～
+        delay(1000);
+    } else if( xbee_result.MODE ){                  // その他の受信時
+        lcd.clear();
+        lcd.print( "MODE="); lcd.print(xbee_result.MODE,  HEX);
+        lcd.print(" STAT="); lcd.print(xbee_result.STATUS,HEX);
+        lcd.setCursor(0,1);
+        for(i=0;i<8;i++){                           // 送信元のアドレスを表示
+            lcd.print(xbee_result.FROM[i]>>4, HEX);
+            lcd.print(xbee_result.FROM[i]%16, HEX);
+        }
+    }
+}

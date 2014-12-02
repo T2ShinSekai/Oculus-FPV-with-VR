@@ -1,0 +1,1268 @@
+ libxbee3
+
+ Timestamp is 52277b6a (Wed Sep 04 19:26:50 2013)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00025b54H .text                   CODE
+ 0002:00000000 00000194H .idata$5                DATA
+ 0002:00000194 00000004H .CRT$XCA                DATA
+ 0002:00000198 00000004H .CRT$XCZ                DATA
+ 0002:0000019c 00000004H .CRT$XIA                DATA
+ 0002:000001a0 00000010H .CRT$XIC                DATA
+ 0002:000001b0 00000004H .CRT$XIZ                DATA
+ 0002:000001b4 00000004H .CRT$XPA                DATA
+ 0002:000001b8 00000004H .CRT$XPX                DATA
+ 0002:000001bc 00000004H .CRT$XPXA               DATA
+ 0002:000001c0 00000004H .CRT$XPZ                DATA
+ 0002:000001c4 00000004H .CRT$XTA                DATA
+ 0002:000001c8 00000004H .CRT$XTZ                DATA
+ 0002:000001d0 00001a98H .rdata                  DATA
+ 0002:00001c70 0000000cH .rdata$sxdata           DATA
+ 0002:00001c7c 00000004H .rtc$IAA                DATA
+ 0002:00001c80 00000000H .rtc$IMZ                DATA
+ 0002:00001c80 00000004H .rtc$IZZ                DATA
+ 0002:00001c84 00000004H .rtc$TAA                DATA
+ 0002:00001c88 00000000H .rtc$TMZ                DATA
+ 0002:00001c88 00000004H .rtc$TZZ                DATA
+ 0002:00001c90 000004b4H .xdata$x                DATA
+ 0002:00002144 00000014H .idata$2                DATA
+ 0002:00002158 00000014H .idata$3                DATA
+ 0002:0000216c 00000194H .idata$4                DATA
+ 0002:00002300 00000762H .idata$6                DATA
+ 0002:00002a70 00000585H .edata                  DATA
+ 0003:00000000 00003ab8H .data                   DATA
+ 0003:00003ac0 000020c4H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000408H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000003       ___safe_se_handler_count   00000003     <absolute>
+ 0000:00000000       ___ImageBase               10000000     <linker-defined>
+ 0001:00000000       _xbee_conAlloc             10001000 f   conn.o
+ 0001:00000120       _xbee_conFree              10001120 f   conn.o
+ 0001:00000330       _xbee_conLink              10001330 f   conn.o
+ 0001:000004c0       _xbee_conUnlink            100014c0 f   conn.o
+ 0001:00000570       _xbee_conLogAddress        10001570 f   conn.o
+ 0001:000007d0       _xbee_conAddressCmpDefault 100017d0 f   conn.o
+ 0001:000009f0       __xbee_conLocate           100019f0 f   conn.o
+ 0001:00000bf0       _xbee_conLocate            10001bf0 f   conn.o
+ 0001:00000c20       _xbee_conGetTypes          10001c20 f   conn.o
+ 0001:00000e00       __xbee_conNew              10001e00 f   conn.o
+ 0001:00001170       _xbee_conNew               10002170 f   conn.o
+ 0001:000011a0       _xbee_conValidate          100021a0 f   conn.o
+ 0001:00001220       _xbee_conGetXBee           10002220 f   conn.o
+ 0001:00001270       _xbee_conWake              10002270 f   conn.o
+ 0001:000013d0       _xbee_conTx                100023d0 f   conn.o
+ 0001:00001450       _xbee_conxTx               10002450 f   conn.o
+ 0001:000014d0       _xbee_convTx               100024d0 f   conn.o
+ 0001:00001500       _xbee_convxTx              10002500 f   conn.o
+ 0001:00001560       __xbee_convxTx             10002560 f   conn.o
+ 0001:00001650       _xbee_connTx               10002650 f   conn.o
+ 0001:00001680       _xbee_connxTx              10002680 f   conn.o
+ 0001:000016e0       __xbee_connxTx             100026e0 f   conn.o
+ 0001:00001a10       _xbee_conLinkPacket        10002a10 f   conn.o
+ 0001:00001a80       _xbee_conRx                10002a80 f   conn.o
+ 0001:00001c10       _xbee_conRxWait            10002c10 f   conn.o
+ 0001:00001c90       _xbee_conPurge             10002c90 f   conn.o
+ 0001:00001da0       _xbee_conSleepSet          10002da0 f   conn.o
+ 0001:00001e50       _xbee_conSleepGet          10002e50 f   conn.o
+ 0001:00001ee0       _xbee_conDataSet           10002ee0 f   conn.o
+ 0001:00001f30       _xbee_conDataGet           10002f30 f   conn.o
+ 0001:00001f80       _xbee_conTypeGet           10002f80 f   conn.o
+ 0001:00001fd0       _xbee_conInfoGet           10002fd0 f   conn.o
+ 0001:00002020       _xbee_conCallbackHandler   10003020 f   conn.o
+ 0001:000021d0       _xbee_conCallbackProd      100031d0 f   conn.o
+ 0001:00002370       _xbee_conCallbackSet       10003370 f   conn.o
+ 0001:000023d0       _xbee_conCallbackGet       100033d0 f   conn.o
+ 0001:00002420       _xbee_conSettings          10003420 f   conn.o
+ 0001:00002540       _xbee_conEnd               10003540 f   conn.o
+ 0001:000025d0       _xbee_errorToStr           100035d0 f   error.o
+ 0001:000027c0       _xbee_frameBlockAlloc      100037c0 f   frame.o
+ 0001:000028e0       _xbee_frameBlockFree       100038e0 f   frame.o
+ 0001:00002990       _xbee_frameGetFreeID       10003990 f   frame.o
+ 0001:00002ac0       _xbee_frameWait            10003ac0 f   frame.o
+ 0001:00002cb0       _xbee_framePost            10003cb0 f   frame.o
+ 0001:00002e10       _xbee_ll_init              10003e10 f   ll.o
+ 0001:00002ea0       _xbee_ll_destroy           10003ea0 f   ll.o
+ 0001:00002f70       _xbee_ll_alloc             10003f70 f   ll.o
+ 0001:00002fd0       _xbee_ll_free              10003fd0 f   ll.o
+ 0001:00003000       _xbee_ll_lock              10004000 f   ll.o
+ 0001:00003070       _xbee_ll_unlock            10004070 f   ll.o
+ 0001:000030e0       __xbee_ll_add_head         100040e0 f   ll.o
+ 0001:00003210       __xbee_ll_add_tail         10004210 f   ll.o
+ 0001:00003340       __xbee_ll_add_after        10004340 f   ll.o
+ 0001:000034b0       __xbee_ll_add_before       100044b0 f   ll.o
+ 0001:00003620       __xbee_ll_get_head         10004620 f   ll.o
+ 0001:000036f0       __xbee_ll_get_tail         100046f0 f   ll.o
+ 0001:000037c0       ___xbee_ll_get_item        100047c0 f   ll.o
+ 0001:00003890       __xbee_ll_get_item         10004890 f   ll.o
+ 0001:000038c0       __xbee_ll_get_next         100048c0 f   ll.o
+ 0001:00003a10       __xbee_ll_get_prev         10004a10 f   ll.o
+ 0001:00003b60       __xbee_ll_get_index        10004b60 f   ll.o
+ 0001:00003c60       __xbee_ll_ext_head         10004c60 f   ll.o
+ 0001:00003d70       __xbee_ll_ext_tail         10004d70 f   ll.o
+ 0001:00003e80       __xbee_ll_ext_item         10004e80 f   ll.o
+ 0001:00003fc0       __xbee_ll_ext_index        10004fc0 f   ll.o
+ 0001:00004110       __xbee_ll_modify_item      10005110 f   ll.o
+ 0001:00004200       __xbee_ll_count_items      10005200 f   ll.o
+ 0001:000042d0       _xbee_ll_combine           100052d0 f   ll.o
+ 0001:00004440       _xbee_logAlloc             10005440 f   log.o
+ 0001:00004500       _xbee_logFree              10005500 f   log.o
+ 0001:00004570       _xbee_logTargetSet         10005570 f   log.o
+ 0001:000045f0       _xbee_logTargetGet         100055f0 f   log.o
+ 0001:00004640       _xbee_logLevelSet          10005640 f   log.o
+ 0001:000046c0       _xbee_logLevelGet          100056c0 f   log.o
+ 0001:00004710       __xbee_logWrite            10005710 f   log.o
+ 0001:00004d70       __xbee_logDev              10005d70 f   log.o
+ 0001:00004e30       __xbee_log                 10005e30 f   log.o
+ 0001:00004ed0       __xbee_logData             10005ed0 f   log.o
+ 0001:00005120       _xbee_modeRetrieve         10006120 f   mode.o
+ 0001:00005200       _xbee_modeImport           10006200 f   mode.o
+ 0001:00005390       _xbee_modeAddConType       10006390 f   mode.o
+ 0001:00005590       _xbee_modeCleanup          10006590 f   mode.o
+ 0001:000056b0       _xbee_modeLocateConType    100066b0 f   mode.o
+ 0001:00005820       _xbee_modeGetList          10006820 f   mode.o
+ 0001:000059a0       _xbee_modeGet              100069a0 f   mode.o
+ 0001:000059f0       _xbee_mutex_lock           100069f0 f   mutex.o
+ 0001:00005d00       _xbee_mutex_trylock        10006d00 f   mutex.o
+ 0001:00005db0       _xbee_mutex_unlock         10006db0 f   mutex.o
+ 0001:00005eb0       _xbee_netStart             10006eb0 f   net.o
+ 0001:00005ec0       _xbee_netvStart            10006ec0 f   net.o
+ 0001:00005ed0       _xbee_netStop              10006ed0 f   net.o
+ 0001:00005ee0       _xbee_netClientShutdown    10006ee0 f   net.o
+ 0001:00005ef0       _xbee_pktAlloc             10006ef0 f   pkt.o
+ 0001:00005ff0       _xbee_pktFree              10006ff0 f   pkt.o
+ 0001:00006080       _xbee_pktValidate          10007080 f   pkt.o
+ 0001:000060b0       _xbee_pktLink              100070b0 f   pkt.o
+ 0001:00006170       __xbee_pktUnlink           10007170 f   pkt.o
+ 0001:00006200       _xbee_pktUnlink            10007200 f   pkt.o
+ 0001:00006220       _xbee_pktDataKeyAdd        10007220 f   pkt.o
+ 0001:00006390       _xbee_pktDataKeyGet        10007390 f   pkt.o
+ 0001:000064d0       _xbee_pktDataAdd           100074d0 f   pkt.o
+ 0001:000065b0       _xbee_pktDataGet           100075b0 f   pkt.o
+ 0001:000066f0       _xbee_pktAnalogAdd         100076f0 f   pkt.o
+ 0001:00006750       _xbee_pktAnalogGet         10007750 f   pkt.o
+ 0001:00006810       _xbee_pktDigitalAdd        10007810 f   pkt.o
+ 0001:00006870       _xbee_pktDigitalGet        10007870 f   pkt.o
+ 0001:00006940       _xbee_init                 10007940 f   prepare.o
+ 0001:00007160       _xbee_fini                 10008160 f   prepare.o
+ 0001:00007260       _xbee_rxAlloc              10008260 f   rx.o
+ 0001:00007330       _xbee_rxFree               10008330 f   rx.o
+ 0001:00007390       _xbee_rx                   10008390 f   rx.o
+ 0001:00007550       _xbee_rxHandler            10008550 f   rx.o
+ 0001:00007c30       _xbee_threadValidate       10008c30 f   thread.o
+ 0001:00007c80       _threadFunc                10008c80 f   thread.o
+ 0001:00008240       __xbee_threadStart         10009240 f   thread.o
+ 0001:000087f0       _xbee_threadKill           100097f0 f   thread.o
+ 0001:000089d0       _xbee_threadKillThis       100099d0 f   thread.o
+ 0001:000089f0       _xbee_threadJoin           100099f0 f   thread.o
+ 0001:00008be0       _xbee_threadKillJoin       10009be0 f   thread.o
+ 0001:00008c80       _xbee_threadRelease        10009c80 f   thread.o
+ 0001:00008cf0       _xbee_threadStopRelease    10009cf0 f   thread.o
+ 0001:00008d60       _xbee_threadKillRelease    10009d60 f   thread.o
+ 0001:00008e10       _xbee_threadDestroyMine    10009e10 f   thread.o
+ 0001:00008f20       _xbee_txAlloc              10009f20 f   tx.o
+ 0001:00008ff0       _xbee_txFree               10009ff0 f   tx.o
+ 0001:00009050       _xbee_tx                   1000a050 f   tx.o
+ 0001:000091d0       _xbee_txQueueBuffer        1000a1d0 f   tx.o
+ 0001:00009240       _xbee_txHandler            1000a240 f   tx.o
+ 0001:000094b0       _xbee_freeMemory           1000a4b0 f   xbee.o
+ 0001:000094d0       _xbee_validate             1000a4d0 f   xbee.o
+ 0001:00009500       _xbee_alloc                1000a500 f   xbee.o
+ 0001:00009af0       _xbee_free                 1000aaf0 f   xbee.o
+ 0001:00009c30       _xbee_vsetup               1000ac30 f   xbee.o
+ 0001:00009ed0       _xbee_setup                1000aed0 f   xbee.o
+ 0001:00009f20       _xbee_shutdownThread       1000af20 f   xbee.o
+ 0001:00009fa0       _xbee_shutdown             1000afa0 f   xbee.o
+ 0001:0000a010       _xbee_attachEOFCallback    1000b010 f   xbee.o
+ 0001:0000a070       _xbee_dataSet              1000b070 f   xbee.o
+ 0001:0000a0c0       _xbee_dataGet              1000b0c0 f   xbee.o
+ 0001:0000a110       _DllMain@12                1000b110 f   xsys.o
+ 0001:0000a180       _DllCanUnloadNow@0         1000b180 f   xsys.o
+ 0001:0000a1a0       _xsys_serialSetup          1000b1a0 f   xsys.o
+ 0001:0000a390       _xsys_serialShutdown       1000b390 f   xsys.o
+ 0001:0000a3e0       _xsys_serialRead           1000b3e0 f   xsys.o
+ 0001:0000a500       _xsys_serialWrite          1000b500 f   xsys.o
+ 0001:0000a5d0       _xsys_sem_timedwait        1000b5d0 f   xsys.o
+ 0001:0000a6e0       _xsys_sem_getvalue         1000b6e0 f   xsys.o
+ 0001:0000a800       _getFILETIMEoffset         1000b800 f   xsys.o
+ 0001:0000a8f0       _clock_gettime             1000b8f0 f   xsys.o
+ 0001:0000aac0       _xbee_serialSetup          1000bac0 f   xsys.o
+ 0001:0000aad0       _xbee_xbeeRxIo             1000bad0 f   modes_common.o
+ 0001:0000af70       _xbee_xbeeTxIo             1000bf70 f   modes_common.o
+ 0001:0000b1a0       _xbee_s1_at_rx_func        1000c1a0 f   modes_xbee1_at.o
+ 0001:0000b3b0       _xbee_s1_at_rx_funcPost    1000c3b0 f   modes_xbee1_at.o
+ 0001:0000b400       _xbee_s1_at_tx_func        1000c400 f   modes_xbee1_at.o
+ 0001:0000b6d0       _xbee_s1_localAt_init      1000c6d0 f   modes_xbee1_at.o
+ 0001:0000b760       _xbee_s1_remoteAt_init     1000c760 f   modes_xbee1_at.o
+ 0001:0000b7f0       _xbee_s1_data_rx_func      1000c7f0 f   modes_xbee1_data.o
+ 0001:0000b9c0       _xbee_s1_data_tx_func      1000c9c0 f   modes_xbee1_data.o
+ 0001:0000bbc0       _xbee_s1_16bitData_init    1000cbc0 f   modes_xbee1_data.o
+ 0001:0000bc20       _xbee_s1_64bitData_init    1000cc20 f   modes_xbee1_data.o
+ 0001:0000bc80       _xbee_s1_io_parseInputs    1000cc80 f   modes_xbee1_io.o
+ 0001:0000bea0       _xbee_s1_io_rx_func        1000cea0 f   modes_xbee1_io.o
+ 0001:0000c070       _xbee_s1_io_rx_funcPost    1000d070 f   modes_xbee1_io.o
+ 0001:0000c0a0       _xbee_s1_16bitIo_init      1000d0a0 f   modes_xbee1_io.o
+ 0001:0000c0f0       _xbee_s1_64bitIo_init      1000d0f0 f   modes_xbee1_io.o
+ 0001:0000c2f0       _xbee_s1_transmitStatus_rx_func 1000d2f0 f   modes_xbee1_mode.o
+ 0001:0000c400       _xbee_s1_transmitStatus_init 1000d400 f   modes_xbee1_mode.o
+ 0001:0000c440       _xbee_s1_modemStatus_rx_func 1000d440 f   modes_xbee1_mode.o
+ 0001:0000c520       _xbee_s1_modemStatus_init  1000d520 f   modes_xbee1_mode.o
+ 0001:0000c560       _xbee_s2_at_rx_func        1000d560 f   modes_xbee2_at.o
+ 0001:0000c770       _xbee_s2_at_rx_funcPost    1000d770 f   modes_xbee2_at.o
+ 0001:0000c7c0       _xbee_s2_at_tx_func        1000d7c0 f   modes_xbee2_at.o
+ 0001:0000ca30       _xbee_s2_localAt_init      1000da30 f   modes_xbee2_at.o
+ 0001:0000cac0       _xbee_s2_remoteAt_init     1000dac0 f   modes_xbee2_at.o
+ 0001:0000cb50       _xbee_s2_data_rx_func      1000db50 f   modes_xbee2_data.o
+ 0001:0000cca0       _xbee_s2_data_tx_func      1000dca0 f   modes_xbee2_data.o
+ 0001:0000cf50       _xbee_s2_data_init         1000df50 f   modes_xbee2_data.o
+ 0001:0000cfb0       _xbee_s2_dataExp_rx_func   1000dfb0 f   modes_xbee2_dataExp.o
+ 0001:0000d120       _xbee_s2_dataExp_tx_func   1000e120 f   modes_xbee2_dataExp.o
+ 0001:0000d480       _xbee_s2_dataExp_init      1000e480 f   modes_xbee2_dataExp.o
+ 0001:0000d4e0       _xbee_s2_identify_rx_func  1000e4e0 f   modes_xbee2_identify.o
+ 0001:0000d700       _xbee_s2_identify_init     1000e700 f   modes_xbee2_identify.o
+ 0001:0000d740       _xbee_s2_io_parseInputs    1000e740 f   modes_xbee2_io.o
+ 0001:0000d9a0       _xbee_s2_io_rx_func        1000e9a0 f   modes_xbee2_io.o
+ 0001:0000daf0       _xbee_s2_io_rx_funcPost    1000eaf0 f   modes_xbee2_io.o
+ 0001:0000db20       _xbee_s2_io_init           1000eb20 f   modes_xbee2_io.o
+ 0001:0000dd30       _xbee_s2_transmitStatus_rx_func 1000ed30 f   modes_xbee2_mode.o
+ 0001:0000de60       _xbee_s2_transmitStatus_init 1000ee60 f   modes_xbee2_mode.o
+ 0001:0000dea0       _xbee_s2_modemStatus_rx_func 1000eea0 f   modes_xbee2_mode.o
+ 0001:0000df80       _xbee_s2_modemStatus_init  1000ef80 f   modes_xbee2_mode.o
+ 0001:0000dfc0       _xbee_s2_sensor_rx_func    1000efc0 f   modes_xbee2_sensor.o
+ 0001:0000e100       _xbee_s2_sensor_init       1000f100 f   modes_xbee2_sensor.o
+ 0001:0000e150       _xbee_s3_at_rx_func        1000f150 f   modes_xbee3_at.o
+ 0001:0000e340       _xbee_s3_at_rx_funcPost    1000f340 f   modes_xbee3_at.o
+ 0001:0000e390       _xbee_s3_at_tx_func        1000f390 f   modes_xbee3_at.o
+ 0001:0000e5a0       _xbee_s3_localAt_init      1000f5a0 f   modes_xbee3_at.o
+ 0001:0000e630       _xbee_s3_remoteAt_init     1000f630 f   modes_xbee3_at.o
+ 0001:0000e6c0       _xbee_s3_data_rx_func      1000f6c0 f   modes_xbee3_data.o
+ 0001:0000e7f0       _xbee_s3_data_tx_func      1000f7f0 f   modes_xbee3_data.o
+ 0001:0000ea80       _xbee_s3_data_init         1000fa80 f   modes_xbee3_data.o
+ 0001:0000eae0       _xbee_s3_dataExp_rx_func   1000fae0 f   modes_xbee3_dataExp.o
+ 0001:0000ec90       _xbee_s3_dataExp_tx_func   1000fc90 f   modes_xbee3_dataExp.o
+ 0001:0000f070       _xbee_s3_dataExp_init      10010070 f   modes_xbee3_dataExp.o
+ 0001:0000f0d0       _xbee_s3_identify_rx_func  100100d0 f   modes_xbee3_identify.o
+ 0001:0000f450       _xbee_s3_identity_init     10010450 f   modes_xbee3_identify.o
+ 0001:0000f490       _xbee_s3_io_parseInputs    10010490 f   modes_xbee3_io.o
+ 0001:0000f890       _xbee_s3_transmitStatus_rx_func 10010890 f   modes_xbee3_mode.o
+ 0001:0000f9c0       _xbee_s3_transmitStatus_init 100109c0 f   modes_xbee3_mode.o
+ 0001:0000fa00       _xbee_s3_modemStatus_rx_func 10010a00 f   modes_xbee3_mode.o
+ 0001:0000fae0       _xbee_s3_modemStatus_init  10010ae0 f   modes_xbee3_mode.o
+ 0001:0000fb20       _xbee_s5_at_rx_func        10010b20 f   modes_xbee5_at.o
+ 0001:0000fd10       _xbee_s5_at_rx_funcPost    10010d10 f   modes_xbee5_at.o
+ 0001:0000fd60       _xbee_s5_at_tx_func        10010d60 f   modes_xbee5_at.o
+ 0001:0000ff70       _xbee_s5_localAt_init      10010f70 f   modes_xbee5_at.o
+ 0001:00010000       _xbee_s5_remoteAt_init     10011000 f   modes_xbee5_at.o
+ 0001:00010090       _xbee_s5_data_rx_func      10011090 f   modes_xbee5_data.o
+ 0001:000101c0       _xbee_s5_data_tx_func      100111c0 f   modes_xbee5_data.o
+ 0001:00010450       _xbee_s5_data_init         10011450 f   modes_xbee5_data.o
+ 0001:000104b0       _xbee_s5_dataExp_rx_func   100114b0 f   modes_xbee5_dataExp.o
+ 0001:00010660       _xbee_s5_dataExp_tx_func   10011660 f   modes_xbee5_dataExp.o
+ 0001:00010a40       _xbee_s5_dataExp_init      10011a40 f   modes_xbee5_dataExp.o
+ 0001:00010aa0       _xbee_s5_identify_rx_func  10011aa0 f   modes_xbee5_identify.o
+ 0001:00010c80       _xbee_s5_identify_init     10011c80 f   modes_xbee5_identify.o
+ 0001:00010cc0       _xbee_s5_io_parseInputs    10011cc0 f   modes_xbee5_io.o
+ 0001:000110c0       _xbee_s5_transmitStatus_rx_func 100120c0 f   modes_xbee5_mode.o
+ 0001:000111f0       _xbee_s5_transmitStatus_init 100121f0 f   modes_xbee5_mode.o
+ 0001:00011230       _xbee_s5_modemStatus_rx_func 10012230 f   modes_xbee5_mode.o
+ 0001:00011310       _xbee_s5_modemStatus_init  10012310 f   modes_xbee5_mode.o
+ 0001:00011350       _xbee_s6b_at_rx_func       10012350 f   modes_xbee6b_at.o
+ 0001:00011550       _xbee_s6b_at_tx_func       10012550 f   modes_xbee6b_at.o
+ 0001:000117d0       _xbee_s6b_localAt_init     100127d0 f   modes_xbee6b_at.o
+ 0001:00011850       _xbee_s6b_remoteAt_init    10012850 f   modes_xbee6b_at.o
+ 0001:000118d0       _xbee_s6b_data_rx_func     100128d0 f   modes_xbee6b_data.o
+ 0001:00011ab0       _xbee_s6b_data_tx_func     10012ab0 f   modes_xbee6b_data.o
+ 0001:00011da0       _xbee_s6b_data_addressCmp  10012da0 f   modes_xbee6b_data.o
+ 0001:00011ec0       _xbee_s6b_data_init        10012ec0 f   modes_xbee6b_data.o
+ 0001:00011f20       _xbee_s6b_io_parseInputs   10012f20 f   modes_xbee6b_io.o
+ 0001:00012150       _xbee_s6b_io_rx_func       10013150 f   modes_xbee6b_io.o
+ 0001:000122b0       _xbee_s6b_io_rx_funcPost   100132b0 f   modes_xbee6b_io.o
+ 0001:000122e0       _xbee_s6b_io_init          100132e0 f   modes_xbee6b_io.o
+ 0001:000124e0       _xbee_s6b_transmitStatus_rx_func 100134e0 f   modes_xbee6b_mode.o
+ 0001:000125f0       _xbee_s6b_transmitStatus_init 100135f0 f   modes_xbee6b_mode.o
+ 0001:00012630       _xbee_s6b_modemStatus_rx_func 10013630 f   modes_xbee6b_mode.o
+ 0001:00012710       _xbee_s6b_modemStatus_init 10013710 f   modes_xbee6b_mode.o
+ 0001:00012750       _xbee_s6b_frameError_rx_func 10013750 f   modes_xbee6b_mode.o
+ 0001:00012830       _xbee_s6b_frameError_init  10013830 f   modes_xbee6b_mode.o
+ 0001:00012870       _xbee_sZB_at_rx_func       10013870 f   modes_xbeeZB_at.o
+ 0001:00012a80       _xbee_sZB_at_rx_funcPost   10013a80 f   modes_xbeeZB_at.o
+ 0001:00012ad0       _xbee_sZB_at_tx_func       10013ad0 f   modes_xbeeZB_at.o
+ 0001:00012dc0       _xbee_sZB_localAt_init     10013dc0 f   modes_xbeeZB_at.o
+ 0001:00012e50       _xbee_sZB_remoteAt_init    10013e50 f   modes_xbeeZB_at.o
+ 0001:00012ee0       _xbee_sZB_data_rx_func     10013ee0 f   modes_xbeeZB_data.o
+ 0001:00013030       _xbee_sZB_data_tx_func     10014030 f   modes_xbeeZB_data.o
+ 0001:00013330       _xbee_sZB_data_init        10014330 f   modes_xbeeZB_data.o
+ 0001:00013390       _xbee_sZB_dataExp_rx_func  10014390 f   modes_xbeeZB_dataExp.o
+ 0001:00013560       _xbee_sZB_dataExp_tx_func  10014560 f   modes_xbeeZB_dataExp.o
+ 0001:000139a0       _xbee_sZB_dataExp_init     100149a0 f   modes_xbeeZB_dataExp.o
+ 0001:00013a00       _xbee_sZB_identify_rx_func 10014a00 f   modes_xbeeZB_identify.o
+ 0001:00013d60       _xbee_sZB_identify_init    10014d60 f   modes_xbeeZB_identify.o
+ 0001:00013da0       _xbee_sZB_io_parseInputs   10014da0 f   modes_xbeeZB_io.o
+ 0001:00014000       _xbee_sZB_io_rx_func       10015000 f   modes_xbeeZB_io.o
+ 0001:00014150       _xbee_sZB_io_rx_funcPost   10015150 f   modes_xbeeZB_io.o
+ 0001:00014180       _xbee_sZB_io_init          10015180 f   modes_xbeeZB_io.o
+ 0001:00014390       _xbee_sZB_transmitStatus_rx_func 10015390 f   modes_xbeeZB_mode.o
+ 0001:000144c0       _xbee_sZB_transmitStatus_init 100154c0 f   modes_xbeeZB_mode.o
+ 0001:00014500       _xbee_sZB_modemStatus_rx_func 10015500 f   modes_xbeeZB_mode.o
+ 0001:000145e0       _xbee_sZB_modemStatus_init 100155e0 f   modes_xbeeZB_mode.o
+ 0001:00014620       _xbee_sZB_ota_rx_func      10015620 f   modes_xbeeZB_ota.o
+ 0001:00014760       _xbee_sZB_ota_init         10015760 f   modes_xbeeZB_ota.o
+ 0001:000147b0       _xbee_sZB_sensor_rx_func   100157b0 f   modes_xbeeZB_sensor.o
+ 0001:000148f0       _xbee_sZB_sensor_init      100158f0 f   modes_xbeeZB_sensor.o
+ 0001:00014940       _memset                    10015940 f   LIBCMT:memset.obj
+ 0001:000149ba       _V6_HeapAlloc              100159ba f   LIBCMT:malloc.obj
+ 0001:00014a09       _malloc                    10015a09 f   LIBCMT:malloc.obj
+ 0001:00014ad3       __RTC_CheckEsp             10015ad3 f   LIBCMT:_stack_.obj
+ 0001:00014af6       @_RTC_CheckStackVars@8     10015af6 f   LIBCMT:_stack_.obj
+ 0001:00014b52       _free                      10015b52 f   LIBCMT:free.obj
+ 0001:00014be0       _memcmp                    10015be0 f   LIBCMT:memcmp.obj
+ 0001:00016260       _strcpy                    10017260 f   LIBCMT:strcat.obj
+ 0001:00016270       _strcat                    10017270 f   LIBCMT:strcat.obj
+ 0001:00016360       _strlen                    10017360 f   LIBCMT:strlen.obj
+ 0001:000163f0       _memcpy                    100173f0 f   LIBCMT:memcpy.obj
+ 0001:00016755       __get_errno_from_oserr     10017755 f   LIBCMT:dosmap.obj
+ 0001:00016797       __errno                    10017797 f   LIBCMT:dosmap.obj
+ 0001:000167aa       ___doserrno                100177aa f   LIBCMT:dosmap.obj
+ 0001:000167bd       __dosmaperr                100177bd f   LIBCMT:dosmap.obj
+ 0001:000167e0       _calloc                    100177e0 f   LIBCMT:calloc.obj
+ 0001:00016820       __flush                    10017820 f   LIBCMT:fflush.obj
+ 0001:00016888       __fflush_nolock            10017888 f   LIBCMT:fflush.obj
+ 0001:000169aa       _fflush                    100179aa f   LIBCMT:fflush.obj
+ 0001:000169fd       __flushall                 100179fd f   LIBCMT:fflush.obj
+ 0001:00016a06       _fprintf                   10017a06 f   LIBCMT:fprintf.obj
+ 0001:00016b22       @__security_check_cookie@4 10017b22 f   LIBCMT:secchk.obj
+ 0001:00016b31       __endthreadex              10017b31 f   LIBCMT:threadex.obj
+ 0001:00016c32       __beginthreadex            10017c32 f   LIBCMT:threadex.obj
+ 0001:00016ce2       _abort                     10017ce2 f   LIBCMT:abort.obj
+ 0001:00016dfc       __setjmp3                  10017dfc f   LIBCMT:setjmp3.obj
+ 0001:00016e78       _longjmp                   10017e78 f   LIBCMT:longjmp.obj
+ 0001:00016f30       _strncpy                   10017f30 f   LIBCMT:strncpy.obj
+ 0001:00017054       __snprintf                 10018054 f   LIBCMT:snprintf.obj
+ 0001:00017103       ??0_LocaleUpdate@@QAE@PAUlocaleinfo_struct@@@Z 10018103 f i LIBCMT:stricmp.obj
+ 0001:0001718a       ___ascii_stricmp           1001818a f   LIBCMT:stricmp.obj
+ 0001:000171c3       __stricmp_l                100181c3 f   LIBCMT:stricmp.obj
+ 0001:00017298       __stricmp                  10018298 f   LIBCMT:stricmp.obj
+ 0001:000172ea       _realloc                   100182ea f   LIBCMT:realloc.obj
+ 0001:00017505       __strnicmp_l               10018505 f   LIBCMT:strnicmp.obj
+ 0001:000175f7       __strnicmp                 100185f7 f   LIBCMT:strnicmp.obj
+ 0001:00017655       ___iob_func                10018655 f   LIBCMT:_file.obj
+ 0001:0001765b       ___initstdio               1001865b f   LIBCMT:_file.obj
+ 0001:0001770c       ___endstdio                1001870c f   LIBCMT:_file.obj
+ 0001:0001772c       __lock_file                1001872c f   LIBCMT:_file.obj
+ 0001:0001776d       __lock_file2               1001876d f   LIBCMT:_file.obj
+ 0001:0001779f       __unlock_file              1001879f f   LIBCMT:_file.obj
+ 0001:000177db       __unlock_file2             100187db f   LIBCMT:_file.obj
+ 0001:0001780a       __time64                   1001880a f   LIBCMT:time64.obj
+ 0001:00017860       __alldiv                   10018860 f   LIBCMT:lldiv.obj
+ 0001:00017910       _strcmp                    10018910 f   LIBCMT:strcmp.obj
+ 0001:00017a02       _sscanf                    10018a02 f   LIBCMT:sscanf.obj
+ 0001:00017a24       __getenv_helper_nolock     10018a24 f   LIBCMT:getenv.obj
+ 0001:00017aab       _getenv                    10018aab f   LIBCMT:getenv.obj
+ 0001:00017b30       __allmul                   10018b30 f   LIBCMT:llmul.obj
+ 0001:00017b70       __allshl                   10018b70 f   LIBCMT:llshl.obj
+ 0001:00017b8f       __cfltcvt_init             10018b8f f   LIBCMT:_fpinit_.obj
+ 0001:00017bef       __fpmath                   10018bef f   LIBCMT:_fpinit_.obj
+ 0001:00017c20       __allrem                   10018c20 f   LIBCMT:llrem.obj
+ 0001:00017ce0       __ftol2_sse                10018ce0 f   LIBCMT:ftol2.obj
+ 0001:00017ce9       __ftol2_pentium4           10018ce9 f   LIBCMT:ftol2.obj
+ 0001:00017cfc       __ftol2_sse_excpt          10018cfc f   LIBCMT:ftol2.obj
+ 0001:00017d16       __ftol2                    10018d16 f   LIBCMT:ftol2.obj
+ 0001:00017d8b       __CRT_INIT@12              10018d8b f   LIBCMT:dllcrt0.obj
+ 0001:00017fb6       __DllMainCRTStartup@12     10018fb6 f   LIBCMT:dllcrt0.obj
+ 0001:00018030       __VEC_memzero              10019030 f   LIBCMT:p4_memset.obj
+ 0001:0001810f       __get_sse2_info            1001910f f   LIBCMT:cpu_disp.obj
+ 0001:00018171       ___sse2_available_init     10019171 f   LIBCMT:cpu_disp.obj
+ 0001:0001817e       __mtinitlocks              1001917e f   LIBCMT:mlock.obj
+ 0001:000181c9       __mtdeletelocks            100191c9 f   LIBCMT:mlock.obj
+ 0001:00018220       __unlock                   10019220 f   LIBCMT:mlock.obj
+ 0001:00018237       __mtinitlocknum            10019237 f   LIBCMT:mlock.obj
+ 0001:000182fa       __lock                     100192fa f   LIBCMT:mlock.obj
+ 0001:0001832d       ___sbh_find_block          1001932d f   LIBCMT:sbheap.obj
+ 0001:0001835d       ___sbh_free_block          1001935d f   LIBCMT:sbheap.obj
+ 0001:00018673       ___sbh_alloc_new_region    10019673 f   LIBCMT:sbheap.obj
+ 0001:00018723       ___sbh_alloc_new_group     10019723 f   LIBCMT:sbheap.obj
+ 0001:0001882b       ___sbh_resize_block        1001982b f   LIBCMT:sbheap.obj
+ 0001:00018b0c       ___sbh_alloc_block         10019b0c f   LIBCMT:sbheap.obj
+ 0001:00018df4       __SEH_prolog4              10019df4 f   LIBCMT:sehprolg4.obj
+ 0001:00018e39       __SEH_epilog4              10019e39 f   LIBCMT:sehprolg4.obj
+ 0001:00018e50       __except_handler4          10019e50 f   LIBCMT:chandler4.obj
+ 0001:00018fdc       __heap_init                10019fdc f   LIBCMT:heapinit.obj
+ 0001:0001900c       __heap_term                1001a00c f   LIBCMT:heapinit.obj
+ 0001:00019080       __crt_waiting_on_module_handle 1001a080 f   LIBCMT:crt0dat.obj
+ 0001:000190b0       __amsg_exit                1001a0b0 f   LIBCMT:crt0dat.obj
+ 0001:000190d9       ___crtCorExitProcess       1001a0d9 f   LIBCMT:crt0dat.obj
+ 0001:00019104       ___crtExitProcess          1001a104 f   LIBCMT:crt0dat.obj
+ 0001:0001911c       __lockexit                 1001a11c f   LIBCMT:crt0dat.obj
+ 0001:00019125       __unlockexit               1001a125 f   LIBCMT:crt0dat.obj
+ 0001:0001914b       __initterm_e               1001a14b f   LIBCMT:crt0dat.obj
+ 0001:0001916f       __cinit                    1001a16f f   LIBCMT:crt0dat.obj
+ 0001:00019320       __exit                     1001a320 f   LIBCMT:crt0dat.obj
+ 0001:00019336       __cexit                    1001a336 f   LIBCMT:crt0dat.obj
+ 0001:00019345       __init_pointers            1001a345 f   LIBCMT:crt0dat.obj
+ 0001:00019393       __NMSG_WRITE               1001a393 f   LIBCMT:crt0msg.obj
+ 0001:0001953e       __FF_MSGBANNER             1001a53e f   LIBCMT:crt0msg.obj
+ 0001:00019577       __initp_heap_handler       1001a577 f   LIBCMT:handler.obj
+ 0001:00019586       __callnewh                 1001a586 f   LIBCMT:handler.obj
+ 0001:00019859       ?_RTC_Failure@@YAXPAXH@Z   1001a859 f   LIBCMT:_error_.obj
+ 0001:00019894       ?_RTC_StackFailure@@YAXPAXPBD@Z 1001a894 f   LIBCMT:_error_.obj
+ 0001:00019987       ?_RTC_GetErrorFunc@@YAP6AHHPBDH00ZZPBX@Z 1001a987 f   LIBCMT:_userapi_.obj
+ 0001:0001998d       ?_RTC_GetErrorFuncW@@YAP6AHHPB_WH00ZZPBX@Z 1001a98d f   LIBCMT:_userapi_.obj
+ 0001:00019a1a       __VEC_memcpy               1001aa1a f   LIBCMT:p4_memcpy.obj
+ 0001:00019afd       __vsnprintf_l              1001aafd f   LIBCMT:vsnprint.obj
+ 0001:00019bb0       _vsnprintf                 1001abb0 f   LIBCMT:vsnprint.obj
+ 0001:00019bb0       __vsnprintf                1001abb0 f   LIBCMT:vsnprint.obj
+ 0001:00019bcd       __encode_pointer           1001abcd f   LIBCMT:tidtable.obj
+ 0001:00019c3f       __encoded_null             1001ac3f f   LIBCMT:tidtable.obj
+ 0001:00019c48       __decode_pointer           1001ac48 f   LIBCMT:tidtable.obj
+ 0001:00019cba       ___crtTlsAlloc@4           1001acba f   LIBCMT:tidtable.obj
+ 0001:00019cc3       ___fls_getvalue@4          1001acc3 f   LIBCMT:tidtable.obj
+ 0001:00019cdd       ___get_flsindex            1001acdd f   LIBCMT:tidtable.obj
+ 0001:00019ce3       ___set_flsgetvalue         1001ace3 f   LIBCMT:tidtable.obj
+ 0001:00019d17       ___fls_setvalue@8          1001ad17 f   LIBCMT:tidtable.obj
+ 0001:00019d34       __mtterm                   1001ad34 f   LIBCMT:tidtable.obj
+ 0001:00019d71       __initptd                  1001ad71 f   LIBCMT:tidtable.obj
+ 0001:00019e58       __getptd_noexit            1001ae58 f   LIBCMT:tidtable.obj
+ 0001:00019ed1       __getptd                   1001aed1 f   LIBCMT:tidtable.obj
+ 0001:00019eeb       __freefls@4                1001aeeb f   LIBCMT:tidtable.obj
+ 0001:0001a01a       __freeptd                  1001b01a f   LIBCMT:tidtable.obj
+ 0001:0001a088       __mtinit                   1001b088 f   LIBCMT:tidtable.obj
+ 0001:0001a215       __initp_misc_invarg        1001b215 f   LIBCMT:invarg.obj
+ 0001:0001a224       __invoke_watson            1001b224 f   LIBCMT:invarg.obj
+ 0001:0001a34c       __invalid_parameter        1001b34c f   LIBCMT:invarg.obj
+ 0001:0001a372       __calloc_impl              1001b372 f   LIBCMT:calloc_impl.obj
+ 0001:0001a490       __write_nolock             1001b490 f   LIBCMT:write.obj
+ 0001:0001abc3       __write                    1001bbc3 f   LIBCMT:write.obj
+ 0001:0001ac9f       __fileno                   1001bc9f f   LIBCMT:fileno.obj
+ 0001:0001acd1       __commit                   1001bcd1 f   LIBCMT:commit.obj
+ 0001:0001adb2       __stbuf                    1001bdb2 f   LIBCMT:_sftbuf.obj
+ 0001:0001ae4e       __ftbuf                    1001be4e f   LIBCMT:_sftbuf.obj
+ 0001:0001af28       __output_l                 1001bf28 f   LIBCMT:output.obj
+ 0001:0001bac0       __ioinit                   1001cac0 f   LIBCMT:ioinit.obj
+ 0001:0001bd14       __ioterm                   1001cd14 f   LIBCMT:ioinit.obj
+ 0001:0001bd62       ___report_gsfailure        1001cd62 f   LIBCMT:gs_report.obj
+ 0001:0001be70       __ValidateImageBase        1001ce70 f   LIBCMT:pesect.obj
+ 0001:0001beb0       __FindPESection            1001ceb0 f   LIBCMT:pesect.obj
+ 0001:0001bf00       __IsNonwritableInCurrentImage 1001cf00 f   LIBCMT:pesect.obj
+ 0001:0001bfbd       __initp_misc_winxfltr      1001cfbd f   LIBCMT:winxfltr.obj
+ 0001:0001bfbd       __fpclear                  1001cfbd f   LIBCMT:_fpinit_.obj
+ 0001:0001bfbe       __XcptFilter               1001cfbe f   LIBCMT:winxfltr.obj
+ 0001:0001c11e       ___CppXcptFilter           1001d11e f   LIBCMT:winxfltr.obj
+ 0001:0001c13e       __malloc_crt               1001d13e f   LIBCMT:crtheap.obj
+ 0001:0001c183       __calloc_crt               1001d183 f   LIBCMT:crtheap.obj
+ 0001:0001c1cf       __realloc_crt              1001d1cf f   LIBCMT:crtheap.obj
+ 0001:0001c21d       __recalloc_crt             1001d21d f   LIBCMT:crtheap.obj
+ 0001:0001c26f       __initp_misc_winsig        1001d26f f   LIBCMT:winsig.obj
+ 0001:0001c2c4       ___get_sigabrt             1001d2c4 f   LIBCMT:winsig.obj
+ 0001:0001c2d1       _raise                     1001d2d1 f   LIBCMT:winsig.obj
+ 0001:0001c484       __global_unwind2           1001d484 f   LIBCMT:exsup.obj
+ 0001:0001c4e9       __local_unwind2            1001d4e9 f   LIBCMT:exsup.obj
+ 0001:0001c56d       __abnormal_termination     1001d56d f   LIBCMT:exsup.obj
+ 0001:0001c590       __NLG_Notify1              1001d590 f   LIBCMT:exsup.obj
+ 0001:0001c599       __NLG_Notify               1001d599 f   LIBCMT:exsup.obj
+ 0001:0001c5b0       __NLG_Dispatch             1001d5b0     LIBCMT:exsup.obj
+ 0001:0001c5b0       __NLG_Dispatch2            1001d5b0     LIBCMT:exsup.obj
+ 0001:0001c5b8       __NLG_Call                 1001d5b8 f   LIBCMT:exsup.obj
+ 0001:0001c5ba       __NLG_Return2              1001d5ba     LIBCMT:exsup.obj
+ 0001:0001c5bb       __rt_probe_read4@4         1001d5bb f   LIBCMT:sehsupp.obj
+ 0001:0001c606       __flsbuf                   1001d606 f   LIBCMT:_flsbuf.obj
+ 0001:0001c990       ___updatetmbcinfo          1001d990 f   LIBCMT:mbctype.obj
+ 0001:0001cab0       __setmbcp_nolock           1001dab0 f   LIBCMT:mbctype.obj
+ 0001:0001cc95       __setmbcp                  1001dc95 f   LIBCMT:mbctype.obj
+ 0001:0001ce2f       ___initmbctable            1001de2f f   LIBCMT:mbctype.obj
+ 0001:0001ce4d       ___freetlocinfo            1001de4d f   LIBCMT:setlocal.obj
+ 0001:0001cf96       ___addlocaleref            1001df96 f   LIBCMT:setlocal.obj
+ 0001:0001d025       ___removelocaleref         1001e025 f   LIBCMT:setlocal.obj
+ 0001:0001d0fc       ___updatetlocinfo          1001e0fc f   LIBCMT:setlocal.obj
+ 0001:0001d172       __tolower_l                1001e172 f   LIBCMT:tolower.obj
+ 0001:0001d287       _tolower                   1001e287 f   LIBCMT:tolower.obj
+ 0001:0001d2c0       ___ascii_strnicmp          1001e2c0 f   LIBCMT:_strnicm.obj
+ 0001:0001d321       __fcloseall                1001e321 f   LIBCMT:closeall.obj
+ 0001:0001d3c0       __aulldiv                  1001e3c0 f   LIBCMT:ulldiv.obj
+ 0001:0001d4f2       __input_l                  1001e4f2 f   LIBCMT:input.obj
+ 0001:0001e4af       __mbsnbicoll_l             1001f4af f   LIBCMT:mbsnbico.obj
+ 0001:0001e59d       __mbsnbicoll               1001f59d f   LIBCMT:mbsnbico.obj
+ 0001:0001e5b7       ___wtomb_environ           1001f5b7 f   LIBCMT:wtombenv.obj
+ 0001:0001e64e       _strcpy_s                  1001f64e f   LIBCMT:strcpy_s.obj
+ 0001:0001e6b6       _strnlen                   1001f6b6 f   LIBCMT:strlen_s.obj
+ 0001:0001e6d3       __forcdecpt_l              1001f6d3 f   LIBCMT:cvt.obj
+ 0001:0001e746       __cropzeros_l              1001f746 f   LIBCMT:cvt.obj
+ 0001:0001e7c8       __positive                 1001f7c8 f   LIBCMT:cvt.obj
+ 0001:0001e7e4       __fassign_l                1001f7e4 f   LIBCMT:cvt.obj
+ 0001:0001e826       __fassign                  1001f826 f   LIBCMT:cvt.obj
+ 0001:0001e85f       __forcdecpt                1001f85f f   LIBCMT:cvt.obj
+ 0001:0001e872       __cropzeros                1001f872 f   LIBCMT:cvt.obj
+ 0001:0001e9f4       __cftoe_l                  1001f9f4 f   LIBCMT:cvt.obj
+ 0001:0001eac4       __cftoe                    1001fac4 f   LIBCMT:cvt.obj
+ 0001:0001eae4       __cftoa_l                  1001fae4 f   LIBCMT:cvt.obj
+ 0001:0001ef4e       __cftof_l                  1001ff4e f   LIBCMT:cvt.obj
+ 0001:0001f009       __cftog_l                  10020009 f   LIBCMT:cvt.obj
+ 0001:0001f103       __cfltcvt_l                10020103 f   LIBCMT:cvt.obj
+ 0001:0001f18b       __cfltcvt                  1002018b f   LIBCMT:cvt.obj
+ 0001:0001f1ae       __initp_misc_cfltcvt_tab   100201ae f   LIBCMT:cmiscdat.obj
+ 0001:0001f1cf       __setdefaultprecision      100201cf f   LIBCMT:fp8.obj
+ 0001:0001f1fa       __ms_p5_test_fdiv          100201fa f   LIBCMT:_testfdiv_.obj
+ 0001:0001f238       __ms_p5_mp_test_fdiv       10020238 f   LIBCMT:_testfdiv_.obj
+ 0001:0001f261       __setenvp                  10020261 f   LIBCMT:stdenvp.obj
+ 0001:0001f4d9       __setargv                  100204d9 f   LIBCMT:stdargv.obj
+ 0001:0001f594       ___crtGetEnvironmentStringsA 10020594 f   LIBCMT:a_env.obj
+ 0001:0001f6cb       __RTC_Initialize           100206cb f   LIBCMT:_initsect_.obj
+ 0001:0001f6f1       __RTC_Terminate            100206f1 f   LIBCMT:_initsect_.obj
+ 0001:0001f717       ___security_init_cookie    10020717 f   LIBCMT:gs_support.obj
+ 0001:0001f7ad       __initp_misc_initcrit      100207ad f   LIBCMT:initcrit.obj
+ 0001:0001f7bc       ___crtInitCritSecAndSpinCount 100207bc f   LIBCMT:initcrit.obj
+ 0001:0001f820       _memmove                   10020820 f   LIBCMT:memmove.obj
+ 0001:0001fb88       __local_unwind4            10020b88 f   LIBCMT:exsup4.obj
+ 0001:0001fc5e       __seh_longjmp_unwind4@4    10020c5e f   LIBCMT:exsup4.obj
+ 0001:0001fc7a       @_EH4_CallFilterFunc@8     10020c7a f   LIBCMT:exsup4.obj
+ 0001:0001fc91       @_EH4_TransferToHandler@8  10020c91 f   LIBCMT:exsup4.obj
+ 0001:0001fcaa       @_EH4_GlobalUnwind@4       10020caa f   LIBCMT:exsup4.obj
+ 0001:0001fcc4       @_EH4_LocalUnwind@16       10020cc4 f   LIBCMT:exsup4.obj
+ 0001:0001fd95       ___onexitinit              10020d95 f   LIBCMT:onexit.obj
+ 0001:0001fdc6       __onexit                   10020dc6 f   LIBCMT:onexit.obj
+ 0001:0001fe02       _atexit                    10020e02 f   LIBCMT:onexit.obj
+ 0001:0001fe19       ?terminate@@YAXXZ          10020e19 f   LIBCMT:hooks.obj
+ 0001:0001fe52       __initp_eh_hooks           10020e52 f   LIBCMT:hooks.obj
+ 0001:0001fe63       __initp_misc_rand_s        10020e63 f   LIBCMT:rand_s.obj
+ 0001:0001fe72       __initp_misc_purevirt      10020e72 f   LIBCMT:inithelp.obj
+ 0001:0001fe81       ___crtMessageBoxA          10020e81 f   LIBCMT:crtmbox.obj
+ 0001:0001ffea       _strcat_s                  10020fea f   LIBCMT:strcat_s.obj
+ 0001:0002005e       _strncpy_s                 1002105e f   LIBCMT:strncpy_s.obj
+ 0001:00020113       __set_error_mode           10021113 f   LIBCMT:errmode.obj
+ 0001:00020304       ?_RTC_GetSrcLine@@YAHPAEPA_WKPAH1K@Z 10021304 f   LIBCMT:_pdblkup_.obj
+ 0001:00020581       __crt_debugger_hook        10021581 f   LIBCMT:dbghook.obj
+ 0001:00020589       __putwch_nolock            10021589 f   LIBCMT:putwch.obj
+ 0001:0002064e       __mbtowc_l                 1002164e f   LIBCMT:mbtowc.obj
+ 0001:00020765       _mbtowc                    10021765 f   LIBCMT:mbtowc.obj
+ 0001:0002077f       __isleadbyte_l             1002177f f i LIBCMT:_wctype.obj
+ 0001:000207b7       _isleadbyte                100217b7 f i LIBCMT:_wctype.obj
+ 0001:000207ca       __isatty                   100217ca f   LIBCMT:isatty.obj
+ 0001:0002082e       __lseeki64_nolock          1002182e f   LIBCMT:lseeki64.obj
+ 0001:000208b3       __lseeki64                 100218b3 f   LIBCMT:lseeki64.obj
+ 0001:000209d0       __alloca_probe             100219d0     LIBCMT:chkstk.obj
+ 0001:000209d0       __chkstk                   100219d0 f   LIBCMT:chkstk.obj
+ 0001:000209fb       __free_osfhnd              100219fb f   LIBCMT:osfinfo.obj
+ 0001:00020a81       __get_osfhandle            10021a81 f   LIBCMT:osfinfo.obj
+ 0001:00020af8       ___lock_fhandle            10021af8 f   LIBCMT:osfinfo.obj
+ 0001:00020b98       __unlock_fhandle           10021b98 f   LIBCMT:osfinfo.obj
+ 0001:00020bbf       __get_printf_count_output  10021bbf f   LIBCMT:printf.obj
+ 0001:00020bd5       __wctomb_s_l               10021bd5 f   LIBCMT:wctomb.obj
+ 0001:00020d41       _wctomb_s                  10021d41 f   LIBCMT:wctomb.obj
+ 0001:00020d60       __aulldvrm                 10021d60 f   LIBCMT:ulldvrm.obj
+ 0001:00020df5       __recalloc                 10021df5 f   LIBCMT:recalloc.obj
+ 0001:00020e70       __getbuf                   10021e70 f   LIBCMT:_getbuf.obj
+ 0001:00020eb9       __freea                    10021eb9 f i LIBCMT:a_map.obj
+ 0001:0002127e       ___crtLCMapStringA         1002227e f   LIBCMT:a_map.obj
+ 0001:0002147d       ___crtGetStringTypeA       1002247d f   LIBCMT:a_str.obj
+ 0001:000214bf       ___free_lc_time            100224bf f   LIBCMT:inittime.obj
+ 0001:00021654       ___free_lconv_num          10022654 f   LIBCMT:initnum.obj
+ 0001:00021699       ___free_lconv_mon          10022699 f   LIBCMT:initmon.obj
+ 0001:00021730       _strcspn                   10022730 f   LIBCMT:strcspn.obj
+ 0001:00021780       _strpbrk                   10022780 f   LIBCMT:strpbrk.obj
+ 0001:000217c0       __isctype_l                100227c0 f   LIBCMT:isctype.obj
+ 0001:00021878       __fclose_nolock            10022878 f   LIBCMT:fclose.obj
+ 0001:000218ef       _fclose                    100228ef f   LIBCMT:fclose.obj
+ 0001:0002196b       __isdigit_l                1002296b f i LIBCMT:_ctype.obj
+ 0001:000219bc       _isdigit                   100229bc f i LIBCMT:_ctype.obj
+ 0001:000219ea       __isxdigit_l               100229ea f i LIBCMT:_ctype.obj
+ 0001:00021a40       _isxdigit                  10022a40 f i LIBCMT:_ctype.obj
+ 0001:00021a70       __isspace_l                10022a70 f i LIBCMT:_ctype.obj
+ 0001:00021ac1       _isspace                   10022ac1 f i LIBCMT:_ctype.obj
+ 0001:00021aef       __filbuf                   10022aef f   LIBCMT:_filbuf.obj
+ 0001:00021c1a       __ungetc_nolock            10022c1a f   LIBCMT:ungetc.obj
+ 0001:00022099       ___crtCompareStringA       10023099 f   LIBCMT:a_cmp.obj
+ 0001:000220db       __strnicoll_l              100230db f   LIBCMT:strnicol.obj
+ 0001:00022281       ___crtsetenv               10023281 f   LIBCMT:setenv.obj
+ 0001:000224d0       _strrchr                   100234d0 f   LIBCMT:strrchr.obj
+ 0001:000224fd       __atodbl_l                 100234fd f   LIBCMT:atodbl.obj
+ 0001:000225a5       __atoflt_l                 100235a5 f   LIBCMT:atodbl.obj
+ 0001:0002264d       __fptostr                  1002364d f   LIBCMT:_fptostr.obj
+ 0001:0002270c       ___dtold                   1002370c f   LIBCMT:_cfout_.obj
+ 0001:000227c9       __fltout2                  100237c9 f   LIBCMT:_cfout_.obj
+ 0001:00022860       __alldvrm                  10023860 f   LIBCMT:lldvrm.obj
+ 0001:00022940       __aullshr                  10023940 f   LIBCMT:ullshr.obj
+ 0001:0002295f       __fptrap                   1002395f f   LIBCMT:crt0fp.obj
+ 0001:00022968       __controlfp_s              10023968 f   LIBCMT:_contrlfp_.obj
+ 0001:00022a27       __ismbblead                10023a27 f   LIBCMT:ismbbyte.obj
+ 0001:00022a3f       __msize                    10023a3f f   LIBCMT:msize.obj
+ 0001:00022ae2       ___initconout              10023ae2 f   LIBCMT:initcon.obj
+ 0001:00022b01       ___termcon                 10023b01 f   LIBCMT:initcon.obj
+ 0001:00022d5d       _strtol                    10023d5d f   LIBCMT:strtol.obj
+ 0001:00022d88       ___ansicp                  10023d88 f   LIBCMT:convrtcp.obj
+ 0001:00022dd1       ___convertcp               10023dd1 f   LIBCMT:convrtcp.obj
+ 0001:00022f90       __alloca_probe_16          10023f90 f   LIBCMT:alloca16.obj
+ 0001:00022fa6       __alloca_probe_8           10023fa6     LIBCMT:alloca16.obj
+ 0001:00022fbc       _atol                      10023fbc f   LIBCMT:atox.obj
+ 0001:00022fd2       __close_nolock             10023fd2 f   LIBCMT:close.obj
+ 0001:0002306e       __close                    1002406e f   LIBCMT:close.obj
+ 0001:0002313b       __freebuf                  1002413b f   LIBCMT:_freebuf.obj
+ 0001:0002316c       __read_nolock              1002416c f   LIBCMT:read.obj
+ 0001:0002372e       __read                     1002472e f   LIBCMT:read.obj
+ 0001:0002382b       __strdup                   1002482b f   LIBCMT:strdup.obj
+ 0001:00023880       __mbschr_l                 10024880 f   LIBCMT:mbschr.obj
+ 0001:0002393c       __mbschr                   1002493c f   LIBCMT:mbschr.obj
+ 0001:00023953       __ld12tod                  10024953 f   LIBCMT:_intrncvt_.obj
+ 0001:00023e97       __ld12tof                  10024e97 f   LIBCMT:_intrncvt_.obj
+ 0001:000243db       ___strgtold12_l            100253db f   LIBCMT:_strgtold_.obj
+ 0001:00024ad3       _$I10_OUTPUT               10025ad3 f   LIBCMT:_x10fout_.obj
+ 0001:00025525       __control87                10026525 f i LIBCMT:_ieee87_.obj
+ 0001:00025850       _strchr                    10026850 f   LIBCMT:strchr.obj
+ 0001:00025856       ___from_strstr_to_strchr   10026856     LIBCMT:strchr.obj
+ 0001:0002590e       ___mtold12                 1002690e f   LIBCMT:_mantold_.obj
+ 0001:00025adc       ___set_fpsr_sse2           10026adc f   LIBCMT:_fpctrl_.obj
+ 0001:00025b4e       _RtlUnwind@16              10026b4e f   kernel32:KERNEL32.dll
+ 0002:00000000       __imp__CreateSemaphoreA@16 10027000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__InitializeCriticalSection@4 10027004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__Sleep@4             10027008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__ReleaseSemaphore@12 1002700c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__CloseHandle@4       10027010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__DeleteCriticalSection@4 10027014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__WaitForSingleObject@8 10027018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__TlsSetValue@8       1002701c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__GetCurrentThread@0  10027020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__TlsGetValue@4       10027024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__TlsAlloc@0          10027028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__AcquireSRWLockShared@4 1002702c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__ReleaseSRWLockShared@4 10027030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__ReleaseSRWLockExclusive@4 10027034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__EnterCriticalSection@4 10027038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__TryEnterCriticalSection@4 1002703c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__LeaveCriticalSection@4 10027040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__AcquireSRWLockExclusive@4 10027044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__ResumeThread@4      10027048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__SetThreadContext@8  1002704c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__GetThreadContext@8  10027050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__SuspendThread@4     10027054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__FlushFileBuffers@4  10027058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__SetCommTimeouts@8   1002705c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__SetCommState@8      10027060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__GetCommState@8      10027064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__CreateFileA@28      10027068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__GetLastError@0      1002706c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__ReadFile@20         10027070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__WriteFile@20        10027074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__GetProcAddress@8    10027078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__LoadLibraryA@4      1002707c     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__SystemTimeToFileTime@8 10027080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__GetSystemTimeAsFileTime@4 10027084     kernel32:KERNEL32.dll
+ 0002:00000088       __imp__QueryPerformanceCounter@4 10027088     kernel32:KERNEL32.dll
+ 0002:0000008c       __imp__QueryPerformanceFrequency@4 1002708c     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__HeapAlloc@12        10027090     kernel32:KERNEL32.dll
+ 0002:00000094       __imp__HeapFree@12         10027094     kernel32:KERNEL32.dll
+ 0002:00000098       __imp__ExitThread@4        10027098     kernel32:KERNEL32.dll
+ 0002:0000009c       __imp__GetCurrentThreadId@0 1002709c     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp__CreateThread@24     100270a0     kernel32:KERNEL32.dll
+ 0002:000000a4       __imp__UnhandledExceptionFilter@4 100270a4     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp__SetUnhandledExceptionFilter@4 100270a8     kernel32:KERNEL32.dll
+ 0002:000000ac       __imp__RtlUnwind@16        100270ac     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp__HeapReAlloc@16      100270b0     kernel32:KERNEL32.dll
+ 0002:000000b4       __imp__GetCommandLineA@0   100270b4     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp__VirtualFree@12      100270b8     kernel32:KERNEL32.dll
+ 0002:000000bc       __imp__VirtualAlloc@16     100270bc     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp__HeapCreate@12       100270c0     kernel32:KERNEL32.dll
+ 0002:000000c4       __imp__HeapDestroy@4       100270c4     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp__GetModuleHandleW@4  100270c8     kernel32:KERNEL32.dll
+ 0002:000000cc       __imp__ExitProcess@4       100270cc     kernel32:KERNEL32.dll
+ 0002:000000d0       __imp__GetStdHandle@4      100270d0     kernel32:KERNEL32.dll
+ 0002:000000d4       __imp__GetModuleFileNameA@12 100270d4     kernel32:KERNEL32.dll
+ 0002:000000d8       __imp__RaiseException@16   100270d8     kernel32:KERNEL32.dll
+ 0002:000000dc       __imp__IsDebuggerPresent@0 100270dc     kernel32:KERNEL32.dll
+ 0002:000000e0       __imp__DebugBreak@0        100270e0     kernel32:KERNEL32.dll
+ 0002:000000e4       __imp__WideCharToMultiByte@32 100270e4     kernel32:KERNEL32.dll
+ 0002:000000e8       __imp__MultiByteToWideChar@24 100270e8     kernel32:KERNEL32.dll
+ 0002:000000ec       __imp__TlsFree@4           100270ec     kernel32:KERNEL32.dll
+ 0002:000000f0       __imp__InterlockedIncrement@4 100270f0     kernel32:KERNEL32.dll
+ 0002:000000f4       __imp__SetLastError@4      100270f4     kernel32:KERNEL32.dll
+ 0002:000000f8       __imp__InterlockedDecrement@4 100270f8     kernel32:KERNEL32.dll
+ 0002:000000fc       __imp__TerminateProcess@8  100270fc     kernel32:KERNEL32.dll
+ 0002:00000100       __imp__GetCurrentProcess@0 10027100     kernel32:KERNEL32.dll
+ 0002:00000104       __imp__GetConsoleCP@0      10027104     kernel32:KERNEL32.dll
+ 0002:00000108       __imp__GetConsoleMode@8    10027108     kernel32:KERNEL32.dll
+ 0002:0000010c       __imp__SetHandleCount@4    1002710c     kernel32:KERNEL32.dll
+ 0002:00000110       __imp__GetFileType@4       10027110     kernel32:KERNEL32.dll
+ 0002:00000114       __imp__GetStartupInfoA@4   10027114     kernel32:KERNEL32.dll
+ 0002:00000118       __imp__GetCPInfo@8         10027118     kernel32:KERNEL32.dll
+ 0002:0000011c       __imp__GetACP@0            1002711c     kernel32:KERNEL32.dll
+ 0002:00000120       __imp__GetOEMCP@0          10027120     kernel32:KERNEL32.dll
+ 0002:00000124       __imp__IsValidCodePage@4   10027124     kernel32:KERNEL32.dll
+ 0002:00000128       __imp__GetModuleHandleA@4  10027128     kernel32:KERNEL32.dll
+ 0002:0000012c       __imp__FreeEnvironmentStringsA@4 1002712c     kernel32:KERNEL32.dll
+ 0002:00000130       __imp__GetEnvironmentStrings@0 10027130     kernel32:KERNEL32.dll
+ 0002:00000134       __imp__FreeEnvironmentStringsW@4 10027134     kernel32:KERNEL32.dll
+ 0002:00000138       __imp__GetEnvironmentStringsW@0 10027138     kernel32:KERNEL32.dll
+ 0002:0000013c       __imp__GetTickCount@0      1002713c     kernel32:KERNEL32.dll
+ 0002:00000140       __imp__GetCurrentProcessId@0 10027140     kernel32:KERNEL32.dll
+ 0002:00000144       __imp__InitializeCriticalSectionAndSpinCount@8 10027144     kernel32:KERNEL32.dll
+ 0002:00000148       __imp__FreeLibrary@4       10027148     kernel32:KERNEL32.dll
+ 0002:0000014c       __imp__GetProcessHeap@0    1002714c     kernel32:KERNEL32.dll
+ 0002:00000150       __imp__GetModuleFileNameW@12 10027150     kernel32:KERNEL32.dll
+ 0002:00000154       __imp__VirtualQuery@12     10027154     kernel32:KERNEL32.dll
+ 0002:00000158       __imp__WriteConsoleA@20    10027158     kernel32:KERNEL32.dll
+ 0002:0000015c       __imp__GetConsoleOutputCP@0 1002715c     kernel32:KERNEL32.dll
+ 0002:00000160       __imp__WriteConsoleW@20    10027160     kernel32:KERNEL32.dll
+ 0002:00000164       __imp__SetFilePointer@16   10027164     kernel32:KERNEL32.dll
+ 0002:00000168       __imp__SetStdHandle@8      10027168     kernel32:KERNEL32.dll
+ 0002:0000016c       __imp__LCMapStringA@24     1002716c     kernel32:KERNEL32.dll
+ 0002:00000170       __imp__LCMapStringW@24     10027170     kernel32:KERNEL32.dll
+ 0002:00000174       __imp__GetStringTypeA@20   10027174     kernel32:KERNEL32.dll
+ 0002:00000178       __imp__GetStringTypeW@16   10027178     kernel32:KERNEL32.dll
+ 0002:0000017c       __imp__GetLocaleInfoA@16   1002717c     kernel32:KERNEL32.dll
+ 0002:00000180       __imp__CompareStringA@24   10027180     kernel32:KERNEL32.dll
+ 0002:00000184       __imp__CompareStringW@24   10027184     kernel32:KERNEL32.dll
+ 0002:00000188       __imp__SetEnvironmentVariableA@8 10027188     kernel32:KERNEL32.dll
+ 0002:0000018c       __imp__HeapSize@12         1002718c     kernel32:KERNEL32.dll
+ 0002:00000190       \177KERNEL32_NULL_THUNK_DATA 10027190     kernel32:KERNEL32.dll
+ 0002:00000194       ___xc_a                    10027194     LIBCMT:crt0init.obj
+ 0002:00000198       ___xc_z                    10027198     LIBCMT:crt0init.obj
+ 0002:0000019c       ___xi_a                    1002719c     LIBCMT:crt0init.obj
+ 0002:000001b0       ___xi_z                    100271b0     LIBCMT:crt0init.obj
+ 0002:000001b4       ___xp_a                    100271b4     LIBCMT:crt0init.obj
+ 0002:000001c0       ___xp_z                    100271c0     LIBCMT:crt0init.obj
+ 0002:000001c4       ___xt_a                    100271c4     LIBCMT:crt0init.obj
+ 0002:000001c8       ___xt_z                    100271c8     LIBCMT:crt0init.obj
+ 0002:000001d0       _modeList                  100271d0     mode.o
+ 0002:000001ec       _libxbee_revision          100271ec     ver.o
+ 0002:000001f4       _libxbee_commit            100271f4     ver.o
+ 0002:00000220       _libxbee_committer         10027220     ver.o
+ 0002:00000244       _libxbee_buildtime         10027244     ver.o
+ 0002:00000260       __real@4024000000000000    10027260     xsys.o
+ 0002:00000268       __real@412e848000000000    10027268     xsys.o
+ 0002:00000270       _mode_xbee1                10027270     modes_xbee1_mode.o
+ 0002:000002a8       _mode_xbee2                100272a8     modes_xbee2_mode.o
+ 0002:000002e0       _mode_xbee3                100272e0     modes_xbee3_mode.o
+ 0002:00000318       _mode_xbee5                10027318     modes_xbee5_mode.o
+ 0002:00000350       _mode_xbee6b               10027350     modes_xbee6b_mode.o
+ 0002:00000388       _mode_xbeeZB               10027388     modes_xbeeZB_mode.o
+ 0002:000003c0       __FPinit                   100273c0     LIBCMT:_fpinit_.obj
+ 0002:000003c4       __FPmtinit                 100273c4     LIBCMT:_fpinit_.obj
+ 0002:000003c8       __FPmtterm                 100273c8     LIBCMT:_fpinit_.obj
+ 0002:000003cc       __pRawDllMain              100273cc     LIBCMT:dllcrt0.obj
+ 0002:000003cc       __pDefaultRawDllMain       100273cc     LIBCMT:dllcrt0.obj
+ 0002:000003d0       ??_C@_0P@MIGLKIOC@CorExitProcess?$AA@ 100273d0     LIBCMT:crt0dat.obj
+ 0002:000003e0       ??_C@_1BI@BGOHAHKC@?$AAm?$AAs?$AAc?$AAo?$AAr?$AAe?$AAe?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 100273e0     LIBCMT:crt0dat.obj
+ 0002:000003f8       ??_C@_0P@GGKDKEEG@runtime?5error?5?$AA@ 100273f8     LIBCMT:crt0msg.obj
+ 0002:00000408       ??_C@_02PCIJFNDE@?$AN?6?$AA@ 10027408     LIBCMT:crt0msg.obj
+ 0002:0000040c       ??_C@_0O@MJNIPGOH@TLOSS?5error?$AN?6?$AA@ 1002740c     LIBCMT:crt0msg.obj
+ 0002:0000041c       ??_C@_0N@BONNPDHF@SING?5error?$AN?6?$AA@ 1002741c     LIBCMT:crt0msg.obj
+ 0002:0000042c       ??_C@_0P@MBDAJNE@DOMAIN?5error?$AN?6?$AA@ 1002742c     LIBCMT:crt0msg.obj
+ 0002:00000440       ??_C@_0JL@DFDOOABL@R6034?$AN?6An?5application?5has?5made?5a@ 10027440     LIBCMT:crt0msg.obj
+ 0002:000004e0       ??_C@_0PH@EPAFIJ@R6033?$AN?6?9?5Attempt?5to?5use?5MSIL?5cod@ 100274e0     LIBCMT:crt0msg.obj
+ 0002:000005d8       ??_C@_0DD@BKEEABMM@R6032?$AN?6?9?5not?5enough?5space?5for?5lo@ 100275d8     LIBCMT:crt0msg.obj
+ 0002:00000610       ??_C@_0GD@OFKILIED@R6031?$AN?6?9?5Attempt?5to?5initialize?5t@ 10027610     LIBCMT:crt0msg.obj
+ 0002:00000674       ??_C@_0BP@LPMHJOKI@R6030?$AN?6?9?5CRT?5not?5initialized?$AN?6?$AA@ 10027674     LIBCMT:crt0msg.obj
+ 0002:00000694       ??_C@_0CF@KJDAIALP@R6028?$AN?6?9?5unable?5to?5initialize?5he@ 10027694     LIBCMT:crt0msg.obj
+ 0002:000006bc       ??_C@_0DF@GAKBPDFP@R6027?$AN?6?9?5not?5enough?5space?5for?5lo@ 100276bc     LIBCMT:crt0msg.obj
+ 0002:000006f4       ??_C@_0DF@IBLNNAIG@R6026?$AN?6?9?5not?5enough?5space?5for?5st@ 100276f4     LIBCMT:crt0msg.obj
+ 0002:0000072c       ??_C@_0CG@IOHKGFNJ@R6025?$AN?6?9?5pure?5virtual?5function?5c@ 1002772c     LIBCMT:crt0msg.obj
+ 0002:00000754       ??_C@_0DF@JIJJFJDC@R6024?$AN?6?9?5not?5enough?5space?5for?5_o@ 10027754     LIBCMT:crt0msg.obj
+ 0002:0000078c       ??_C@_0CJ@EGEJHFME@R6019?$AN?6?9?5unable?5to?5open?5console?5@ 1002778c     LIBCMT:crt0msg.obj
+ 0002:000007b8       ??_C@_0CB@GNHNIELH@R6018?$AN?6?9?5unexpected?5heap?5error?$AN?6@ 100277b8     LIBCMT:crt0msg.obj
+ 0002:000007dc       ??_C@_0CN@FOLDKNG@R6017?$AN?6?9?5unexpected?5multithread?5@ 100277dc     LIBCMT:crt0msg.obj
+ 0002:0000080c       ??_C@_0CM@FAHFJNHO@R6016?$AN?6?9?5not?5enough?5space?5for?5th@ 1002780c     LIBCMT:crt0msg.obj
+ 0002:00000838       ??_C@_0JG@LBKMGKLD@?$AN?6This?5application?5has?5requested@ 10027838     LIBCMT:crt0msg.obj
+ 0002:000008d0       ??_C@_0CM@FLCNIPKK@R6009?$AN?6?9?5not?5enough?5space?5for?5en@ 100278d0     LIBCMT:crt0msg.obj
+ 0002:000008fc       ??_C@_0CK@KMMJOAPP@R6008?$AN?6?9?5not?5enough?5space?5for?5ar@ 100278fc     LIBCMT:crt0msg.obj
+ 0002:00000928       ??_C@_0CN@LEKKICBM@R6002?$AN?6?9?5floating?5point?5support?5@ 10027928     LIBCMT:crt0msg.obj
+ 0002:00000958       ??_C@_0CF@GOGNBNAK@Microsoft?5Visual?5C?$CL?$CL?5Runtime?5Lib@ 10027958     LIBCMT:crt0msg.obj
+ 0002:00000980       ??_C@_02PHMGELLB@?6?6?$AA@ 10027980     LIBCMT:crt0msg.obj
+ 0002:00000984       ??_C@_03KHICJKCI@?4?4?4?$AA@ 10027984     LIBCMT:crt0msg.obj
+ 0002:00000988       ??_C@_0BH@DNAGHKFM@?$DMprogram?5name?5unknown?$DO?$AA@ 10027988     LIBCMT:crt0msg.obj
+ 0002:000009a0       ??_C@_0BK@OFGJDLJJ@Runtime?5Error?$CB?6?6Program?3?5?$AA@ 100279a0     LIBCMT:crt0msg.obj
+ 0002:000009bc       ??_C@_0BO@GNIAFIKK@Unknown?5Runtime?5Check?5Error?6?$AN?$AA@ 100279bc     LIBCMT:_error_.obj
+ 0002:000009dc       ??_C@_0CM@NGINOKPC@Stack?5memory?5around?5_alloca?5was?5@ 100279dc     LIBCMT:_error_.obj
+ 0002:00000a08       ??_C@_0DG@HKJMLLLP@A?5local?5variable?5was?5used?5before@ 10027a08     LIBCMT:_error_.obj
+ 0002:00000a40       ??_C@_0BN@FFOINMNJ@Stack?5memory?5was?5corrupted?6?$AN?$AA@ 10027a40     LIBCMT:_error_.obj
+ 0002:00000a60       ??_C@_0BBN@GPMLNJCF@A?5cast?5to?5a?5smaller?5data?5type?5ha@ 10027a60     LIBCMT:_error_.obj
+ 0002:00000b80       ??_C@_0NN@NGPKDKPD@The?5value?5of?5ESP?5was?5not?5properl@ 10027b80     LIBCMT:_error_.obj
+ 0002:00000cfc       ??_C@_0CA@IODNCDPG@Run?9Time?5Check?5Failure?5?$CD?$CFd?5?9?5?$CFs?$AA@ 10027cfc     LIBCMT:_error_.obj
+ 0002:00000d1c       ??_C@_0BE@GNBOBNCK@Unknown?5Module?5Name?$AA@ 10027d1c     LIBCMT:_error_.obj
+ 0002:00000d30       ??_C@_0BB@PFFGGCJP@Unknown?5Filename?$AA@ 10027d30     LIBCMT:_error_.obj
+ 0002:00000d48       ??_C@_1EA@NFKNIFJP@?$AAR?$AAu?$AAn?$AA?9?$AAT?$AAi?$AAm?$AAe?$AA?5?$AAC?$AAh?$AAe?$AAc?$AAk?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAu?$AAr?$AAe?$AA?5?$AA?$CD?$AA?$CF?$AAd?$AA?5?$AA?9?$AA?5?$AA?$CF?$AAs?$AA?$AA@ 10027d48     LIBCMT:_error_.obj
+ 0002:00000d88       ??_C@_1GM@OLMCBDMB@?$AAR?$AAu?$AAn?$AAt?$AAi?$AAm?$AAe?$AA?5?$AAC?$AAh?$AAe?$AAc?$AAk?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?4?$AA?6?$AA?$AN?$AA?5?$AAU?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo@ 10027d88     LIBCMT:_error_.obj
+ 0002:00000df4       ??_C@_0CG@IAFNJNEE@Stack?5corrupted?5near?5unknown?5var@ 10027df4     LIBCMT:_error_.obj
+ 0002:00000e1c       ??_C@_0BP@OGBCLIBO@Stack?5around?5_alloca?5corrupted?$AA@ 10027e1c     LIBCMT:_userapi_.obj
+ 0002:00000e3c       ??_C@_0CK@CNLNOEPB@Local?5variable?5used?5before?5initi@ 10027e3c     LIBCMT:_userapi_.obj
+ 0002:00000e68       ??_C@_0BI@CIGMDCBH@Stack?5memory?5corruption?$AA@ 10027e68     LIBCMT:_userapi_.obj
+ 0002:00000e80       ??_C@_0CK@FEGOIOPB@Cast?5to?5smaller?5type?5causing?5los@ 10027e80     LIBCMT:_userapi_.obj
+ 0002:00000eac       ??_C@_0BJ@HEGAHDFO@Stack?5pointer?5corruption?$AA@ 10027eac     LIBCMT:_userapi_.obj
+ 0002:00000edc       ??_C@_0O@NLDKAIKN@EncodePointer?$AA@ 10027edc     LIBCMT:tidtable.obj
+ 0002:00000eec       ??_C@_1BK@DBDEIDLH@?$AAK?$AAE?$AAR?$AAN?$AAE?$AAL?$AA3?$AA2?$AA?4?$AAD?$AAL?$AAL?$AA?$AA@ 10027eec     LIBCMT:tidtable.obj
+ 0002:00000f08       ??_C@_0O@KBPMFGHI@DecodePointer?$AA@ 10027f08     LIBCMT:tidtable.obj
+ 0002:00000f18       ??_C@_07PEJMOBNF@FlsFree?$AA@ 10027f18     LIBCMT:tidtable.obj
+ 0002:00000f20       ??_C@_0M@JCPCPOEF@FlsSetValue?$AA@ 10027f20     LIBCMT:tidtable.obj
+ 0002:00000f2c       ??_C@_0M@GDNOONDI@FlsGetValue?$AA@ 10027f2c     LIBCMT:tidtable.obj
+ 0002:00000f38       ??_C@_08KNHFBNJ@FlsAlloc?$AA@ 10027f38     LIBCMT:tidtable.obj
+ 0002:00000f44       ??_C@_1O@CEDCILHN@?$AA?$CI?$AAn?$AAu?$AAl?$AAl?$AA?$CJ?$AA?$AA@ 10027f44     LIBCMT:output.obj
+ 0002:00000f54       ??_C@_06OJHGLDPL@?$CInull?$CJ?$AA@ 10027f54     LIBCMT:output.obj
+ 0002:00000f60       ___lookuptable             10027f60     LIBCMT:output.obj
+ 0002:00000fc8       __XcptActTab               10027fc8     LIBCMT:winxfltr.obj
+ 0002:000010c0       ??_C@_05KLBDPFGC@e?$CL000?$AA@ 100280c0     LIBCMT:cvt.obj
+ 0002:000010c8       __real@4150017ec0000000    100280c8     LIBCMT:_testfdiv_.obj
+ 0002:000010d0       __real@4147ffff80000000    100280d0     LIBCMT:_testfdiv_.obj
+ 0002:000010d8       ??_C@_0BK@NHEOCAHP@IsProcessorFeaturePresent?$AA@ 100280d8     LIBCMT:_testfdiv_.obj
+ 0002:000010f4       ??_C@_08CPNIBGIE@KERNEL32?$AA@ 100280f4     LIBCMT:_testfdiv_.obj
+ 0002:00001100       ??_C@_0N@JJPEKNFO@ADVAPI32?4DLL?$AA@ 10028100     LIBCMT:rand_s.obj
+ 0002:00001110       ??_C@_0BI@DFKBFLJE@GetProcessWindowStation?$AA@ 10028110     LIBCMT:crtmbox.obj
+ 0002:00001128       ??_C@_0BK@CIDNPOGP@GetUserObjectInformationA?$AA@ 10028128     LIBCMT:crtmbox.obj
+ 0002:00001144       ??_C@_0BD@HHGDFDBJ@GetLastActivePopup?$AA@ 10028144     LIBCMT:crtmbox.obj
+ 0002:00001158       ??_C@_0BA@HNOPNCHB@GetActiveWindow?$AA@ 10028158     LIBCMT:crtmbox.obj
+ 0002:00001168       ??_C@_0M@CHKKJDAI@MessageBoxA?$AA@ 10028168     LIBCMT:crtmbox.obj
+ 0002:00001174       ??_C@_0L@NDEGIDAG@USER32?4DLL?$AA@ 10028174     LIBCMT:crtmbox.obj
+ 0002:00001180       ??_C@_0M@EKFFODEC@MSPDB80?4DLL?$AA@ 10028180     LIBCMT:_pdblkup_.obj
+ 0002:0000118c       ??_C@_0BF@BMIHBHCA@EnvironmentDirectory?$AA@ 1002818c     LIBCMT:_pdblkup_.obj
+ 0002:000011a4       ??_C@_0CN@JNNIHDGH@SOFTWARE?2Microsoft?2VisualStudio?2@ 100281a4     LIBCMT:_pdblkup_.obj
+ 0002:000011d4       ??_C@_0M@HLOHPNFA@RegCloseKey?$AA@ 100281d4     LIBCMT:_pdblkup_.obj
+ 0002:000011e0       ??_C@_0BB@HHEIPGME@RegQueryValueExA?$AA@ 100281e0     LIBCMT:_pdblkup_.obj
+ 0002:000011f4       ??_C@_0O@DCOGKJGG@RegOpenKeyExA?$AA@ 100281f4     LIBCMT:_pdblkup_.obj
+ 0002:00001204       ??_C@_01KDCPPGHE@r?$AA@    10028204     LIBCMT:_pdblkup_.obj
+ 0002:00001208       ??_C@_0BB@KCIACLNC@PDBOpenValidate5?$AA@ 10028208     LIBCMT:_pdblkup_.obj
+ 0002:00001220       ___lookuptable_s           10028220     LIBCMT:outputs.obj
+ 0002:0000127c       ??_C@_13NOLLCAOD@?$AA?$AA?$AA?$AA@ 1002827c     LIBCMT:a_map.obj
+ 0002:00001280       ___newctype                10028280     LIBCMT:ctype.obj
+ 0002:00001580       __wctype                   10028580     LIBCMT:ctype.obj
+ 0002:00001788       ___newclmap                10028788     LIBCMT:ctype.obj
+ 0002:00001908       ___newcumap                10028908     LIBCMT:ctype.obj
+ 0002:00001a88       ??_C@_08JCCMCCIL@HH?3mm?3ss?$AA@ 10028a88     LIBCMT:strftime.obj
+ 0002:00001a94       ??_C@_0BE@CKGJFCPC@dddd?0?5MMMM?5dd?0?5yyyy?$AA@ 10028a94     LIBCMT:strftime.obj
+ 0002:00001aa8       ??_C@_08BPBNCDIB@MM?1dd?1yy?$AA@ 10028aa8     LIBCMT:strftime.obj
+ 0002:00001ab4       ??_C@_02CJNFDJBF@PM?$AA@   10028ab4     LIBCMT:strftime.obj
+ 0002:00001ab8       ??_C@_02DEDBPAFC@AM?$AA@   10028ab8     LIBCMT:strftime.obj
+ 0002:00001abc       ??_C@_08EDHMEBNP@December?$AA@ 10028abc     LIBCMT:strftime.obj
+ 0002:00001ac8       ??_C@_08HCHEGEOA@November?$AA@ 10028ac8     LIBCMT:strftime.obj
+ 0002:00001ad4       ??_C@_07JJNFCEND@October?$AA@ 10028ad4     LIBCMT:strftime.obj
+ 0002:00001adc       ??_C@_09BHHEALKD@September?$AA@ 10028adc     LIBCMT:strftime.obj
+ 0002:00001ae8       ??_C@_06LBBHFDDG@August?$AA@ 10028ae8     LIBCMT:strftime.obj
+ 0002:00001af0       ??_C@_04MIEPOIFP@July?$AA@ 10028af0     LIBCMT:strftime.obj
+ 0002:00001af8       ??_C@_04CNLMGBGM@June?$AA@ 10028af8     LIBCMT:strftime.obj
+ 0002:00001b00       ??_C@_05DMJDNLEJ@April?$AA@ 10028b00     LIBCMT:strftime.obj
+ 0002:00001b08       ??_C@_05HPCKOFNC@March?$AA@ 10028b08     LIBCMT:strftime.obj
+ 0002:00001b10       ??_C@_08GNJGEPFN@February?$AA@ 10028b10     LIBCMT:strftime.obj
+ 0002:00001b1c       ??_C@_07CGJPFGJA@January?$AA@ 10028b1c     LIBCMT:strftime.obj
+ 0002:00001b24       ??_C@_03MKABNOCG@Dec?$AA@  10028b24     LIBCMT:strftime.obj
+ 0002:00001b28       ??_C@_03JPJOFNIA@Nov?$AA@  10028b28     LIBCMT:strftime.obj
+ 0002:00001b2c       ??_C@_03BMAOKBAD@Oct?$AA@  10028b2c     LIBCMT:strftime.obj
+ 0002:00001b30       ??_C@_03GGCAPAJC@Sep?$AA@  10028b30     LIBCMT:strftime.obj
+ 0002:00001b34       ??_C@_03IFJFEIGA@Aug?$AA@  10028b34     LIBCMT:strftime.obj
+ 0002:00001b38       ??_C@_03LBGABGKK@Jul?$AA@  10028b38     LIBCMT:strftime.obj
+ 0002:00001b3c       ??_C@_03IDFGHECI@Jun?$AA@  10028b3c     LIBCMT:strftime.obj
+ 0002:00001b40       ??_C@_03CNMDKL@May?$AA@    10028b40     LIBCMT:strftime.obj
+ 0002:00001b44       ??_C@_03LEOLGMJP@Apr?$AA@  10028b44     LIBCMT:strftime.obj
+ 0002:00001b48       ??_C@_03ODNJBKGA@Mar?$AA@  10028b48     LIBCMT:strftime.obj
+ 0002:00001b4c       ??_C@_03HJBDCHOM@Feb?$AA@  10028b4c     LIBCMT:strftime.obj
+ 0002:00001b50       ??_C@_03JIHJHPIE@Jan?$AA@  10028b50     LIBCMT:strftime.obj
+ 0002:00001b54       ??_C@_08INBOOONO@Saturday?$AA@ 10028b54     LIBCMT:strftime.obj
+ 0002:00001b60       ??_C@_06JECMNKMI@Friday?$AA@ 10028b60     LIBCMT:strftime.obj
+ 0002:00001b68       ??_C@_08HACCIKIA@Thursday?$AA@ 10028b68     LIBCMT:strftime.obj
+ 0002:00001b74       ??_C@_09DLIGFAKA@Wednesday?$AA@ 10028b74     LIBCMT:strftime.obj
+ 0002:00001b80       ??_C@_07BAAGCFCM@Tuesday?$AA@ 10028b80     LIBCMT:strftime.obj
+ 0002:00001b88       ??_C@_06JLEDEDGH@Monday?$AA@ 10028b88     LIBCMT:strftime.obj
+ 0002:00001b90       ??_C@_06OOPIFAJ@Sunday?$AA@ 10028b90     LIBCMT:strftime.obj
+ 0002:00001b98       ??_C@_03FEFJNEK@Sat?$AA@   10028b98     LIBCMT:strftime.obj
+ 0002:00001b9c       ??_C@_03IDIOELNC@Fri?$AA@  10028b9c     LIBCMT:strftime.obj
+ 0002:00001ba0       ??_C@_03IOFIKPDN@Thu?$AA@  10028ba0     LIBCMT:strftime.obj
+ 0002:00001ba4       ??_C@_03MHOMLAJA@Wed?$AA@  10028ba4     LIBCMT:strftime.obj
+ 0002:00001ba8       ??_C@_03NAGEINEP@Tue?$AA@  10028ba8     LIBCMT:strftime.obj
+ 0002:00001bac       ??_C@_03PDAGKDH@Mon?$AA@   10028bac     LIBCMT:strftime.obj
+ 0002:00001bb0       ??_C@_03KOEHGMDN@Sun?$AA@  10028bb0     LIBCMT:strftime.obj
+ 0002:00001bb4       ??_C@_07GPDNMNG@CONOUT$?$AA@ 10028bb4     LIBCMT:initcon.obj
+ 0002:00001bbc       ___dnames                  10028bbc     LIBCMT:timeset.obj
+ 0002:00001bd4       ___mnames                  10028bd4     LIBCMT:timeset.obj
+ 0002:00001bfc       ??_C@_06IMKFLFPG@1?$CDQNAN?$AA@ 10028bfc     LIBCMT:_x10fout_.obj
+ 0002:00001c04       ??_C@_05DNEBIAHO@1?$CDINF?$AA@ 10028c04     LIBCMT:_x10fout_.obj
+ 0002:00001c0c       ??_C@_05PHHOCPM@1?$CDIND?$AA@ 10028c0c     LIBCMT:_x10fout_.obj
+ 0002:00001c14       ??_C@_06PGGFOGJG@1?$CDSNAN?$AA@ 10028c14     LIBCMT:_x10fout_.obj
+ 0002:00001c20       __load_config_used         10028c20     LIBCMT:loadcfg.obj
+ 0002:00001c70       ___safe_se_handler_table   10028c70     <linker-defined>
+ 0002:00001c7c       ___rtc_iaa                 10028c7c     LIBCMT:_initsect_.obj
+ 0002:00001c80       ___rtc_izz                 10028c80     LIBCMT:_initsect_.obj
+ 0002:00001c84       ___rtc_taa                 10028c84     LIBCMT:_initsect_.obj
+ 0002:00001c88       ___rtc_tzz                 10028c88     LIBCMT:_initsect_.obj
+ 0002:00002144       __IMPORT_DESCRIPTOR_KERNEL32 10029144     kernel32:KERNEL32.dll
+ 0002:00002158       __NULL_IMPORT_DESCRIPTOR   10029158     kernel32:KERNEL32.dll
+ 0003:000012c8       _xbee_s1_localAt           1002b2c8     modes_xbee1_at.o
+ 0003:00001310       _xbee_s1_remoteAt          1002b310     modes_xbee1_at.o
+ 0003:00001360       _xbee_s1_16bitData         1002b360     modes_xbee1_data.o
+ 0003:00001398       _xbee_s1_64bitData         1002b398     modes_xbee1_data.o
+ 0003:000014b8       _xbee_s1_16bitIo           1002b4b8     modes_xbee1_io.o
+ 0003:00001500       _xbee_s1_64bitIo           1002b500     modes_xbee1_io.o
+ 0003:00001548       _xbee_s1_transmitStatus    1002b548     modes_xbee1_mode.o
+ 0003:00001590       _xbee_s1_modemStatus       1002b590     modes_xbee1_mode.o
+ 0003:00001608       _xbee_s2_localAt           1002b608     modes_xbee2_at.o
+ 0003:00001650       _xbee_s2_remoteAt          1002b650     modes_xbee2_at.o
+ 0003:00001690       _xbee_s2_data              1002b690     modes_xbee2_data.o
+ 0003:000016d8       _xbee_s2_dataExp           1002b6d8     modes_xbee2_dataExp.o
+ 0003:00001750       _xbee_s2_identify          1002b750     modes_xbee2_identify.o
+ 0003:00001868       _xbee_s2_io                1002b868     modes_xbee2_io.o
+ 0003:000018b0       _xbee_s2_transmitStatus    1002b8b0     modes_xbee2_mode.o
+ 0003:000018f8       _xbee_s2_modemStatus       1002b8f8     modes_xbee2_mode.o
+ 0003:00001968       _xbee_s2_sensor            1002b968     modes_xbee2_sensor.o
+ 0003:000019b0       _xbee_s3_localAt           1002b9b0     modes_xbee3_at.o
+ 0003:000019f8       _xbee_s3_remoteAt          1002b9f8     modes_xbee3_at.o
+ 0003:00001a38       _xbee_s3_data              1002ba38     modes_xbee3_data.o
+ 0003:00001a80       _xbee_s3_dataExp           1002ba80     modes_xbee3_dataExp.o
+ 0003:00001b30       _xbee_s3_identify          1002bb30     modes_xbee3_identify.o
+ 0003:00001c58       _xbee_s3_transmitStatus    1002bc58     modes_xbee3_mode.o
+ 0003:00001ca0       _xbee_s3_modemStatus       1002bca0     modes_xbee3_mode.o
+ 0003:00001d10       _xbee_s5_localAt           1002bd10     modes_xbee5_at.o
+ 0003:00001d58       _xbee_s5_remoteAt          1002bd58     modes_xbee5_at.o
+ 0003:00001d98       _xbee_s5_data              1002bd98     modes_xbee5_data.o
+ 0003:00001de0       _xbee_s5_dataExp           1002bde0     modes_xbee5_dataExp.o
+ 0003:00001e48       _xbee_s5_identify          1002be48     modes_xbee5_identify.o
+ 0003:00001f70       _xbee_s5_transmitStatus    1002bf70     modes_xbee5_mode.o
+ 0003:00001fb8       _xbee_s5_modemStatus       1002bfb8     modes_xbee5_mode.o
+ 0003:00002028       _xbee_s6b_localAt          1002c028     modes_xbee6b_at.o
+ 0003:00002070       _xbee_s6b_remoteAt         1002c070     modes_xbee6b_at.o
+ 0003:00002100       _xbee_s6b_data             1002c100     modes_xbee6b_data.o
+ 0003:00002218       _xbee_s6b_io               1002c218     modes_xbee6b_io.o
+ 0003:00002260       _xbee_s6b_transmitStatus   1002c260     modes_xbee6b_mode.o
+ 0003:000022a8       _xbee_s6b_modemStatus      1002c2a8     modes_xbee6b_mode.o
+ 0003:000022f0       _xbee_s6b_frameError       1002c2f0     modes_xbee6b_mode.o
+ 0003:00002360       _xbee_sZB_localAt          1002c360     modes_xbeeZB_at.o
+ 0003:000023a8       _xbee_sZB_remoteAt         1002c3a8     modes_xbeeZB_at.o
+ 0003:000023e8       _xbee_sZB_data             1002c3e8     modes_xbeeZB_data.o
+ 0003:00002430       _xbee_sZB_dataExp          1002c430     modes_xbeeZB_dataExp.o
+ 0003:000024f0       _xbee_sZB_identify         1002c4f0     modes_xbeeZB_identify.o
+ 0003:00002608       _xbee_sZB_io               1002c608     modes_xbeeZB_io.o
+ 0003:00002650       _xbee_sZB_transmitStatus   1002c650     modes_xbeeZB_mode.o
+ 0003:00002698       _xbee_sZB_modemStatus      1002c698     modes_xbeeZB_mode.o
+ 0003:00002720       _xbee_sZB_ota              1002c720     modes_xbeeZB_ota.o
+ 0003:00002760       _xbee_sZB_sensor           1002c760     modes_xbeeZB_sensor.o
+ 0003:00002910       ___security_cookie         1002c910     LIBCMT:gs_cookie.obj
+ 0003:00002914       ___security_cookie_complement 1002c914     LIBCMT:gs_cookie.obj
+ 0003:00002918       ___abort_behavior          1002c918     LIBCMT:abort.obj
+ 0003:00002920       __iob                      1002c920     LIBCMT:_file.obj
+ 0003:00002ba0       __fltused                  1002cba0     LIBCMT:_fpinit_.obj
+ 0003:00002ba4       __ldused                   1002cba4     LIBCMT:_fpinit_.obj
+ 0003:00002cd0       __amblksiz                 1002ccd0     LIBCMT:heapinit.obj
+ 0003:00002cd4       __aexit_rtn                1002ccd4     LIBCMT:crt0dat.obj
+ 0003:00002d90       ?_RTC_ErrorLevels@@3PAHA   1002cd90     LIBCMT:_error_.obj
+ 0003:00002da4       ___flsindex                1002cda4     LIBCMT:tidtable.obj
+ 0003:00002da8       ___getvalueindex           1002cda8     LIBCMT:tidtable.obj
+ 0003:00002dac       ___nullstring              1002cdac     LIBCMT:output.obj
+ 0003:00002db0       ___wnullstring             1002cdb0     LIBCMT:output.obj
+ 0003:00002db8       ___badioinfo               1002cdb8     LIBCMT:ioinit.obj
+ 0003:00002df8       __First_FPE_Indx           1002cdf8     LIBCMT:winxfltr.obj
+ 0003:00002dfc       __Num_FPE                  1002cdfc     LIBCMT:winxfltr.obj
+ 0003:00002e00       __XcptActTabSize           1002ce00     LIBCMT:winxfltr.obj
+ 0003:00002e04       __XcptActTabCount          1002ce04     LIBCMT:winxfltr.obj
+ 0003:00002e08       __NLG_Destination          1002ce08     LIBCMT:exsup.obj
+ 0003:00002e18       ___initialmbcinfo          1002ce18     LIBCMT:mbctype.obj
+ 0003:00003038       __mbctype                  1002d038     LIBCMT:mbctype.obj
+ 0003:00003140       __mbcasemap                1002d140     LIBCMT:mbctype.obj
+ 0003:00003240       ___ptmbcinfo               1002d240     LIBCMT:mbctype.obj
+ 0003:0000333c       ___globallocalestatus      1002d33c     LIBCMT:glstatus.obj
+ 0003:00003340       ___clocalestr              1002d340     LIBCMT:nlsdata2.obj
+ 0003:00003348       ___initiallocinfo          1002d348     LIBCMT:nlsdata2.obj
+ 0003:00003420       ___ptlocinfo               1002d420     LIBCMT:nlsdata2.obj
+ 0003:00003424       ___lc_clike                1002d424     LIBCMT:nlsdata2.obj
+ 0003:00003428       ___initiallocalestructinfo 1002d428     LIBCMT:nlsdata2.obj
+ 0003:00003430       __cfltcvt_tab              1002d430     LIBCMT:cmiscdat.obj
+ 0003:00003470       __pctype                   1002d470     LIBCMT:ctype.obj
+ 0003:00003474       __pwctype                  1002d474     LIBCMT:ctype.obj
+ 0003:00003478       ___lc_time_c               1002d478     LIBCMT:strftime.obj
+ 0003:00003530       ___lc_time_curr            1002d530     LIBCMT:strftime.obj
+ 0003:00003534       ___lconv_static_decimal    1002d534     LIBCMT:lconv.obj
+ 0003:00003538       ___lconv_c                 1002d538     LIBCMT:lconv.obj
+ 0003:00003568       ___lconv                   1002d568     LIBCMT:lconv.obj
+ 0003:0000356c       ___mb_cur_max              1002d56c     LIBCMT:nlsdata1.obj
+ 0003:00003570       ___decimal_point           1002d570     LIBCMT:nlsdata1.obj
+ 0003:00003574       ___decimal_point_length    1002d574     LIBCMT:nlsdata1.obj
+ 0003:00003580       __coninpfh                 1002d580     LIBCMT:initcon.obj
+ 0003:00003584       __confh                    1002d584     LIBCMT:initcon.obj
+ 0003:00003590       __timezone                 1002d590     LIBCMT:timeset.obj
+ 0003:00003594       __daylight                 1002d594     LIBCMT:timeset.obj
+ 0003:00003598       __dstbias                  1002d598     LIBCMT:timeset.obj
+ 0003:00003620       __tzname                   1002d620     LIBCMT:timeset.obj
+ 0003:00003640       __lookuptrailbytes         1002d640     LIBCMT:read.obj
+ 0003:00003770       __lpdays                   1002d770     LIBCMT:days.obj
+ 0003:000037a4       __days                     1002d7a4     LIBCMT:days.obj
+ 0003:000037e0       __pow10pos                 1002d7e0     LIBCMT:_constpow_.obj
+ 0003:00003940       __pow10neg                 1002d940     LIBCMT:_constpow_.obj
+ 0003:00003ac0       _conList                   1002dac0     conn.o
+ 0003:00003acc       _netDeadClientList         1002dacc     net.o
+ 0003:00003ad0       _pktList                   1002dad0     pkt.o
+ 0003:00003ad4       _threadList                1002dad4     thread.o
+ 0003:00003ad8       _xbeeList                  1002dad8     xbee.o
+ 0003:00003adc       _needsFree                 1002dadc     xbee.o
+ 0003:00003af0       _module                    1002daf0     xsys.o
+ 0003:00003af4       _attach_counter            1002daf4     xsys.o
+ 0003:00003af8       _NtQuerySemaphore          1002daf8     xsys.o
+ 0003:00003afc       _g_ntdll                   1002dafc     xsys.o
+ 0003:00003b08       __cflush                   1002db08     LIBCMT:_file.obj
+ 0003:00003b0c       ___fastflag                1002db0c     LIBCMT:_fpinit_.obj
+ 0003:00003b10       __adjust_fdiv              1002db10     LIBCMT:_fpinit_.obj
+ 0003:00003b18       __aenvptr                  1002db18     LIBCMT:dllcrt0.obj
+ 0003:00003b1c       __wenvptr                  1002db1c     LIBCMT:dllcrt0.obj
+ 0003:00003b20       ___error_mode              1002db20     LIBCMT:dllcrt0.obj
+ 0003:00003b24       ___app_type                1002db24     LIBCMT:dllcrt0.obj
+ 0003:00003c78       ___sbh_pHeaderDefer        1002dc78     LIBCMT:sbheap.obj
+ 0003:00003c7c       __crtheap                  1002dc7c     LIBCMT:heapinit.obj
+ 0003:00003c80       __umaskval                 1002dc80     LIBCMT:crt0dat.obj
+ 0003:00003c84       ___argc                    1002dc84     LIBCMT:crt0dat.obj
+ 0003:00003c88       ___argv                    1002dc88     LIBCMT:crt0dat.obj
+ 0003:00003c8c       ___wargv                   1002dc8c     LIBCMT:crt0dat.obj
+ 0003:00003c90       __environ                  1002dc90     LIBCMT:crt0dat.obj
+ 0003:00003c94       ___initenv                 1002dc94     LIBCMT:crt0dat.obj
+ 0003:00003c98       __wenviron                 1002dc98     LIBCMT:crt0dat.obj
+ 0003:00003c9c       ___winitenv                1002dc9c     LIBCMT:crt0dat.obj
+ 0003:00003ca0       __pgmptr                   1002dca0     LIBCMT:crt0dat.obj
+ 0003:00003ca4       __wpgmptr                  1002dca4     LIBCMT:crt0dat.obj
+ 0003:00003ca8       __exitflag                 1002dca8     LIBCMT:crt0dat.obj
+ 0003:00003cac       __C_Termination_Done       1002dcac     LIBCMT:crt0dat.obj
+ 0003:00003cb0       __C_Exit_Done              1002dcb0     LIBCMT:crt0dat.obj
+ 0003:00003fcc       ?_pnhHeap@@3P6AHI@ZA       1002dfcc     LIBCMT:handler.obj
+ 0003:00003fd0       __newmode                  1002dfd0     LIBCMT:_newmode.obj
+ 0003:00003fd4       ?wsprintffp@@3P6AHPADPBDZZA 1002dfd4     LIBCMT:_error_.obj
+ 0003:00003fe0       _gpFlsAlloc                1002dfe0     LIBCMT:tidtable.obj
+ 0003:00003fe4       _gpFlsGetValue             1002dfe4     LIBCMT:tidtable.obj
+ 0003:00003fe8       _gpFlsSetValue             1002dfe8     LIBCMT:tidtable.obj
+ 0003:00003fec       _gpFlsFree                 1002dfec     LIBCMT:tidtable.obj
+ 0003:00003ff0       ___pInvalidArgHandler      1002dff0     LIBCMT:invarg.obj
+ 0003:00003ff4       __stdbuf                   1002dff4     LIBCMT:_sftbuf.obj
+ 0003:00004324       __maxwait                  1002e324     LIBCMT:crtheap.obj
+ 0003:00004340       ___mbulinfo                1002e340     LIBCMT:mbctype.obj
+ 0003:0000434c       ___mbcodepage              1002e34c     LIBCMT:mbctype.obj
+ 0003:00004350       ___ismbcodepage            1002e350     LIBCMT:mbctype.obj
+ 0003:00004354       ___mblcid                  1002e354     LIBCMT:mbctype.obj
+ 0003:00004358       ___locale_changed          1002e358     LIBCMT:setlocal.obj
+ 0003:0000435c       ___lc_handle               1002e35c     LIBCMT:nlsdata2.obj
+ 0003:00004374       ___lc_codepage             1002e374     LIBCMT:nlsdata2.obj
+ 0003:00004378       ___lc_collate_cp           1002e378     LIBCMT:nlsdata2.obj
+ 0003:00004490       ?__pInconsistency@@3P6AXXZA 1002e490     LIBCMT:hooks.obj
+ 0003:000044a0       ___pPurecall               1002e4a0     LIBCMT:inithelp.obj
+ 0003:000044d0       ___lconv_static_null       1002e4d0     LIBCMT:lconv.obj
+ 0003:000044d8       __outputformat             1002e4d8     LIBCMT:outputformat.obj
+ 0003:000045a0       _xbee_sZB_sensor_rx        1002e5a0     <common>
+ 0003:000045b0       _xbee_sZB_ota_rx           1002e5b0     <common>
+ 0003:000045c0       _xbee_sZB_transmitStatus_rx 1002e5c0     <common>
+ 0003:000045d0       _xbee_sZB_modemStatus_rx   1002e5d0     <common>
+ 0003:000045e0       _xbee_sZB_io_rx            1002e5e0     <common>
+ 0003:000045f0       _xbee_sZB_identify_rx      1002e5f0     <common>
+ 0003:00004600       _xbee_sZB_dataExp_tx       1002e600     <common>
+ 0003:00004610       _xbee_sZB_dataExp_rx       1002e610     <common>
+ 0003:00004620       _xbee_sZB_data_tx          1002e620     <common>
+ 0003:00004630       _xbee_sZB_data_rx          1002e630     <common>
+ 0003:00004640       _xbee_sZB_localAt_tx       1002e640     <common>
+ 0003:00004650       _xbee_sZB_remoteAt_tx      1002e650     <common>
+ 0003:00004660       _xbee_sZB_remoteAt_rx      1002e660     <common>
+ 0003:00004670       _xbee_sZB_localAt_rx       1002e670     <common>
+ 0003:00004680       _xbee_s6b_frameError_rx    1002e680     <common>
+ 0003:00004690       _xbee_s6b_transmitStatus_rx 1002e690     <common>
+ 0003:000046a0       _xbee_s6b_modemStatus_rx   1002e6a0     <common>
+ 0003:000046b0       _xbee_s6b_io_rx            1002e6b0     <common>
+ 0003:000046c0       _xbee_s6b_data_rx          1002e6c0     <common>
+ 0003:000046d0       _xbee_s6b_data_tx          1002e6d0     <common>
+ 0003:000046e0       _xbee_s6b_localAt_tx       1002e6e0     <common>
+ 0003:000046f0       _xbee_s6b_remoteAt_tx      1002e6f0     <common>
+ 0003:00004700       _xbee_s6b_localAt_rx       1002e700     <common>
+ 0003:00004710       _xbee_s6b_remoteAt_rx      1002e710     <common>
+ 0003:00004720       _xbee_s5_transmitStatus_rx 1002e720     <common>
+ 0003:00004730       _xbee_s5_modemStatus_rx    1002e730     <common>
+ 0003:00004740       _xbee_s5_identify_rx       1002e740     <common>
+ 0003:00004750       _xbee_s5_dataExp_tx        1002e750     <common>
+ 0003:00004760       _xbee_s5_dataExp_rx        1002e760     <common>
+ 0003:00004770       _xbee_s5_data_rx           1002e770     <common>
+ 0003:00004780       _xbee_s5_data_tx           1002e780     <common>
+ 0003:00004790       _xbee_s5_remoteAt_tx       1002e790     <common>
+ 0003:000047a0       _xbee_s5_localAt_rx        1002e7a0     <common>
+ 0003:000047b0       _xbee_s5_remoteAt_rx       1002e7b0     <common>
+ 0003:000047c0       _xbee_s5_localAt_tx        1002e7c0     <common>
+ 0003:000047d0       _xbee_s3_transmitStatus_rx 1002e7d0     <common>
+ 0003:000047e0       _xbee_s3_modemStatus_rx    1002e7e0     <common>
+ 0003:000047f0       _xbee_s3_identify_rx       1002e7f0     <common>
+ 0003:00004800       _xbee_s3_dataExp_rx        1002e800     <common>
+ 0003:00004810       _xbee_s3_dataExp_tx        1002e810     <common>
+ 0003:00004820       _xbee_s3_data_tx           1002e820     <common>
+ 0003:00004830       _xbee_s3_data_rx           1002e830     <common>
+ 0003:00004840       _xbee_s3_remoteAt_rx       1002e840     <common>
+ 0003:00004850       _xbee_s3_localAt_rx        1002e850     <common>
+ 0003:00004860       _xbee_s3_remoteAt_tx       1002e860     <common>
+ 0003:00004870       _xbee_s3_localAt_tx        1002e870     <common>
+ 0003:00004880       _xbee_s2_sensor_rx         1002e880     <common>
+ 0003:00004890       _xbee_s2_transmitStatus_rx 1002e890     <common>
+ 0003:000048a0       _xbee_s2_modemStatus_rx    1002e8a0     <common>
+ 0003:000048b0       _xbee_s2_io_rx             1002e8b0     <common>
+ 0003:000048c0       _xbee_s2_identify_rx       1002e8c0     <common>
+ 0003:000048d0       _xbee_s2_dataExp_rx        1002e8d0     <common>
+ 0003:000048e0       _xbee_s2_dataExp_tx        1002e8e0     <common>
+ 0003:000048f0       _xbee_s2_data_rx           1002e8f0     <common>
+ 0003:00004900       _xbee_s2_data_tx           1002e900     <common>
+ 0003:00004910       _xbee_s2_localAt_tx        1002e910     <common>
+ 0003:00004920       _xbee_s2_localAt_rx        1002e920     <common>
+ 0003:00004930       _xbee_s2_remoteAt_rx       1002e930     <common>
+ 0003:00004940       _xbee_s2_remoteAt_tx       1002e940     <common>
+ 0003:00004950       _xbee_s1_modemStatus_rx    1002e950     <common>
+ 0003:00004960       _xbee_s1_transmitStatus_rx 1002e960     <common>
+ 0003:00004970       _xbee_s1_64bitIo_rx        1002e970     <common>
+ 0003:00004980       _xbee_s1_16bitIo_rx        1002e980     <common>
+ 0003:00004990       _xbee_s1_16bitData_tx      1002e990     <common>
+ 0003:000049a0       _xbee_s1_64bitData_tx      1002e9a0     <common>
+ 0003:000049b0       _xbee_s1_64bitData_rx      1002e9b0     <common>
+ 0003:000049c0       _xbee_s1_16bitData_rx      1002e9c0     <common>
+ 0003:000049d0       _xbee_s1_localAt_tx        1002e9d0     <common>
+ 0003:000049e0       _xbee_s1_remoteAt_rx       1002e9e0     <common>
+ 0003:000049f0       _xbee_s1_localAt_rx        1002e9f0     <common>
+ 0003:00004a00       _xbee_s1_remoteAt_tx       1002ea00     <common>
+ 0003:00004a0c       _threadInfoKey             1002ea0c     <common>
+ 0003:00004a10       __pthread_tls              1002ea10     <common>
+ 0003:00004a14       __pthread_key_dest         1002ea14     <common>
+ 0003:00004a18       __pthread_key_sch          1002ea18     <common>
+ 0003:00004a1c       __pthread_key_max          1002ea1c     <common>
+ 0003:00004a20       __pthread_tls_once         1002ea20     <common>
+ 0003:00004a24       __pthread_cancelling       1002ea24     <common>
+ 0003:00004a28       __pthread_key_lock         1002ea28     <common>
+ 0003:00004a2c       __debugger_hook_dummy      1002ea2c     <common>
+ 0003:00004a30       __nhandle                  1002ea30     <common>
+ 0003:00004a40       ___pioinfo                 1002ea40     <common>
+ 0003:00004b40       ___env_initialized         1002eb40     <common>
+ 0003:00004b44       ___onexitend               1002eb44     <common>
+ 0003:00004b48       ___onexitbegin             1002eb48     <common>
+ 0003:00004b4c       ___mbctype_initialized     1002eb4c     <common>
+ 0003:00004b50       ___dyn_tls_init_callback   1002eb50     <common>
+ 0003:00004b54       ___active_heap             1002eb54     <common>
+ 0003:00004b58       __pDestructExceptionObject 1002eb58     <common>
+ 0003:00004b5c       ___sbh_cntHeaderList       1002eb5c     <common>
+ 0003:00004b60       ___sbh_pHeaderList         1002eb60     <common>
+ 0003:00004b64       ___sbh_threshold           1002eb64     <common>
+ 0003:00004b68       ___sbh_pHeaderScan         1002eb68     <common>
+ 0003:00004b6c       ___sbh_sizeHeaderList      1002eb6c     <common>
+ 0003:00004b70       ___sbh_indGroupDefer       1002eb70     <common>
+ 0003:00004b74       ___sse2_available          1002eb74     <common>
+ 0003:00004b78       __acmdln                   1002eb78     <common>
+ 0003:00004b7c       ___piob                    1002eb7c     <common>
+ 0003:00004b80       __bufin                    1002eb80     <common>
+ 0003:00005b80       __nstream                  1002fb80     <common>
+
+ entry point at        0001:00017fb6
+
+ Static symbols
+
+ 0001:000000f0       _pthread_mutex_init        100010f0 f   conn.o
+ 0001:00000280       __xbee_conFree             10001280 f   conn.o
+ 0001:00000300       _pthread_mutex_destroy     10001300 f   conn.o
+ 0001:000028b0       _pthread_mutex_init        100038b0 f   frame.o
+ 0001:00002960       _pthread_mutex_destroy     10003960 f   frame.o
+ 0001:00002e70       _pthread_mutex_init        10003e70 f   ll.o
+ 0001:00002f40       _pthread_mutex_destroy     10003f40 f   ll.o
+ 0001:000044d0       _pthread_mutex_init        100054d0 f   log.o
+ 0001:00004540       _pthread_mutex_destroy     10005540 f   log.o
+ 0001:00004930       _pthread_testcancel        10005930 f   log.o
+ 0001:00004980       _pthread_self              10005980 f   log.o
+ 0001:00004a90       __pthread_once_raw         10005a90 f   log.o
+ 0001:00004b00       _pthread_tls_init          10005b00 f   log.o
+ 0001:00004b30       __pthread_invoke_cancel    10005b30 f   log.o
+ 0001:00004ba0       _pthread_exit              10005ba0 f   log.o
+ 0001:00004bf0       __pthread_cleanup_dest     10005bf0 f   log.o
+ 0001:00004ce0       _pthread_rwlock_rdlock     10005ce0 f   log.o
+ 0001:00004d10       _pthread_rwlock_unlock     10005d10 f   log.o
+ 0001:000054d0       _prepare_repopConTypes     100064d0 f   mode.o
+ 0001:00005a70       _pthread_mutex_lock        10006a70 f   mutex.o
+ 0001:00005aa0       _pthread_setcancelstate    10006aa0 f   mutex.o
+ 0001:00005b10       _pthread_self              10006b10 f   mutex.o
+ 0001:00005c20       __pthread_once_raw         10006c20 f   mutex.o
+ 0001:00005c90       _pthread_tls_init          10006c90 f   mutex.o
+ 0001:00005cc0       _pthread_getspecific       10006cc0 f   mutex.o
+ 0001:00005d80       _pthread_mutex_trylock     10006d80 f   mutex.o
+ 0001:00005e80       _pthread_mutex_unlock      10006e80 f   mutex.o
+ 0001:00006030       __xbee_pktFree             10007030 f   pkt.o
+ 0001:000064a0       __xbee_pktDataKeyDestroy   100074a0 f   pkt.o
+ 0001:00006ab0       _pthread_testcancel        10007ab0 f   prepare.o
+ 0001:00006b00       _pthread_self              10007b00 f   prepare.o
+ 0001:00006c10       __pthread_once_raw         10007c10 f   prepare.o
+ 0001:00006c80       _pthread_tls_init          10007c80 f   prepare.o
+ 0001:00006cb0       __pthread_invoke_cancel    10007cb0 f   prepare.o
+ 0001:00006d20       _pthread_exit              10007d20 f   prepare.o
+ 0001:00006d70       __pthread_cleanup_dest     10007d70 f   prepare.o
+ 0001:00006e60       _pthread_rwlock_rdlock     10007e60 f   prepare.o
+ 0001:00006e90       _pthread_rwlock_unlock     10007e90 f   prepare.o
+ 0001:00006ef0       _pthread_key_create        10007ef0 f   prepare.o
+ 0001:00007130       _pthread_rwlock_wrlock     10008130 f   prepare.o
+ 0001:00007c10       _time                      10008c10 f   rx.o
+ 0001:00007f80       _pthread_self              10008f80 f   thread.o
+ 0001:00008090       __pthread_once_raw         10009090 f   thread.o
+ 0001:00008100       _pthread_tls_init          10009100 f   thread.o
+ 0001:00008130       _pthread_detach            10009130 f   thread.o
+ 0001:00008180       _pthread_setspecific       10009180 f   thread.o
+ 0001:00008380       _pthread_create            10009380 f   thread.o
+ 0001:000084a0       _pthread_create_wrapper    100094a0 f   thread.o
+ 0001:00008560       __pthread_cleanup_dest     10009560 f   thread.o
+ 0001:00008650       _pthread_rwlock_rdlock     10009650 f   thread.o
+ 0001:00008680       _pthread_rwlock_unlock     10009680 f   thread.o
+ 0001:000086e0       _pthread_testcancel        100096e0 f   thread.o
+ 0001:00008730       __pthread_invoke_cancel    10009730 f   thread.o
+ 0001:000087a0       _pthread_exit              100097a0 f   thread.o
+ 0001:00008880       _pthread_cancel            10009880 f   thread.o
+ 0001:00008b60       _pthread_join              10009b60 f   thread.o
+ 0001:000096b0       _pthread_testcancel        1000a6b0 f   xbee.o
+ 0001:00009700       _pthread_self              1000a700 f   xbee.o
+ 0001:00009810       __pthread_once_raw         1000a810 f   xbee.o
+ 0001:00009880       _pthread_tls_init          1000a880 f   xbee.o
+ 0001:000098b0       __pthread_invoke_cancel    1000a8b0 f   xbee.o
+ 0001:00009920       _pthread_exit              1000a920 f   xbee.o
+ 0001:00009970       __pthread_cleanup_dest     1000a970 f   xbee.o
+ 0001:00009a60       _pthread_rwlock_rdlock     1000aa60 f   xbee.o
+ 0001:00009a90       _pthread_rwlock_unlock     1000aa90 f   xbee.o
+ 0001:00009f50       _pthread_detach            1000af50 f   xbee.o
+ 0001:0000aec0       _escaped_read              1000bec0 f   modes_common.o
+ 0001:0000b100       _escaped_write             1000c100 f   modes_common.o
+ 0001:0000c140       _init                      1000d140 f   modes_xbee1_mode.o
+ 0001:0000c250       _mode_shutdown             1000d250 f   modes_xbee1_mode.o
+ 0001:0000db80       _init                      1000eb80 f   modes_xbee2_mode.o
+ 0001:0000dc90       _mode_shutdown             1000ec90 f   modes_xbee2_mode.o
+ 0001:0000f6e0       _init                      100106e0 f   modes_xbee3_mode.o
+ 0001:0000f7f0       _mode_shutdown             100107f0 f   modes_xbee3_mode.o
+ 0001:00010f10       _init                      10011f10 f   modes_xbee5_mode.o
+ 0001:00011020       _mode_shutdown             10012020 f   modes_xbee5_mode.o
+ 0001:00012330       _init                      10013330 f   modes_xbee6b_mode.o
+ 0001:00012440       _mode_shutdown             10013440 f   modes_xbee6b_mode.o
+ 0001:000141e0       _init                      100151e0 f   modes_xbeeZB_mode.o
+ 0001:000142f0       _mode_shutdown             100152f0 f   modes_xbeeZB_mode.o
+ 0001:000168d0       _flsall                    100178d0 f   LIBCMT:fflush.obj
+ 0001:00016b6e       __callthreadstartex        10017b6e f   LIBCMT:threadex.obj
+ 0001:00016baf       __threadstartex@4          10017baf f   LIBCMT:threadex.obj
+ 0001:00017998       _vscan_fn                  10018998 f   LIBCMT:sscanf.obj
+ 0001:00017ec0       ___DllMainCRTStartup       10018ec0 f   LIBCMT:dllcrt0.obj
+ 0001:00017fd9       _fastzero_I                10018fd9 f   LIBCMT:p4_memset.obj
+ 0001:000180bf       _has_osfxsr_set            100190bf f   LIBCMT:cpu_disp.obj
+ 0001:0001912e       __initterm                 1001a12e f   LIBCMT:crt0dat.obj
+ 0001:000191f4       _doexit                    1001a1f4 f   LIBCMT:crt0dat.obj
+ 0001:000195ae       ?DebuggerProbe@@YAHK@Z     1001a5ae f   LIBCMT:_error_.obj
+ 0001:000195fe       ?DebuggerRuntime@@YAHKHPAXPB_W@Z 1001a5fe f   LIBCMT:_error_.obj
+ 0001:00019660       ?failwithmessage@@YAXPAXHHPBD@Z 1001a660 f   LIBCMT:_error_.obj
+ 0001:00019993       _fastcopy_I                1001a993 f   LIBCMT:p4_memcpy.obj
+ 0001:0001ae82       _write_char                1001be82 f   LIBCMT:output.obj
+ 0001:0001aeb5       _write_multi_char          1001beb5 f   LIBCMT:output.obj
+ 0001:0001aedb       _write_string              1001bedb f   LIBCMT:output.obj
+ 0001:0001c28d       _siglookup                 1001d28d f   LIBCMT:winsig.obj
+ 0001:0001c4a4       __unwind_handler           1001d4a4 f   LIBCMT:exsup.obj
+ 0001:0001c76a       ?CPtoLCID@@YAHH@Z          1001d76a f   LIBCMT:mbctype.obj
+ 0001:0001c799       ?setSBCS@@YAXPAUthreadmbcinfostruct@@@Z 1001d799 f   LIBCMT:mbctype.obj
+ 0001:0001c7fd       ?setSBUpLow@@YAXPAUthreadmbcinfostruct@@@Z 1001d7fd f   LIBCMT:mbctype.obj
+ 0001:0001ca34       ?getSystemCP@@YAHH@Z       1001da34 f   LIBCMT:mbctype.obj
+ 0001:0001d0be       __updatetlocinfoEx_nolock  1001e0be f   LIBCMT:setlocal.obj
+ 0001:0001d428       ___check_float_string      1001e428 f   LIBCMT:input.obj
+ 0001:0001d47f       __hextodec                 1001e47f f   LIBCMT:input.obj
+ 0001:0001d49f       __inc                      1001e49f f   LIBCMT:input.obj
+ 0001:0001d4b5       __un_inc                   1001e4b5 f   LIBCMT:input.obj
+ 0001:0001d4c8       __whiteout                 1001e4c8 f   LIBCMT:input.obj
+ 0001:0001e840       __shift                    1001f840 f   LIBCMT:cvt.obj
+ 0001:0001e885       __cftoe2_l                 1001f885 f   LIBCMT:cvt.obj
+ 0001:0001ee57       __cftof2_l                 1001fe57 f   LIBCMT:cvt.obj
+ 0001:0001f33f       _parse_cmdline             1002033f f   LIBCMT:stdargv.obj
+ 0001:0001fc18       __unwind_handler4          10020c18 f   LIBCMT:exsup4.obj
+ 0001:0001fcdb       __onexit_nolock            10020cdb f   LIBCMT:onexit.obj
+ 0001:0002015e       ?GetPdbDll@@YAPAUHINSTANCE__@@XZ 1002115e f   LIBCMT:_pdblkup_.obj
+ 0001:00020ed9       ?__crtLCMapStringA_stat@@YAHPAUlocaleinfo_struct@@KKPBDHPADHHH@Z 10021ed9 f   LIBCMT:a_map.obj
+ 0001:000212c3       ?__crtGetStringTypeA_stat@@YAHPAUlocaleinfo_struct@@KPBDHPAGHHH@Z 100222c3 f   LIBCMT:a_str.obj
+ 0001:00021d0b       ?strncnt@@YAHPBDH@Z        10022d0b f   LIBCMT:a_cmp.obj
+ 0001:00021d29       ?__crtCompareStringA_stat@@YAHPAUlocaleinfo_struct@@KKPBDH1HH@Z 10022d29 f   LIBCMT:a_cmp.obj
+ 0001:000221d5       _findenv                   100231d5 f   LIBCMT:setenv.obj
+ 0001:00022227       _copy_environ              10023227 f   LIBCMT:setenv.obj
+ 0001:000229d4       ?x_ismbbtype_l@@YAHPAUlocaleinfo_struct@@IHH@Z 100239d4 f   LIBCMT:ismbbyte.obj
+ 0001:00022b2e       ?strtoxl@@YAKPAUlocaleinfo_struct@@PBDPAPBDHH@Z 10023b2e f   LIBCMT:strtol.obj
+ 0001:000253f7       __hw_cw                    100263f7 f   LIBCMT:_ieee87_.obj
+ 0001:00025485       ___hw_cw_sse2              10026485 f   LIBCMT:_ieee87_.obj
