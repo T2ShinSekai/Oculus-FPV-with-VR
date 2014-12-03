@@ -104,13 +104,13 @@ void OnMouseMove(int x)
 byte calcRadianToAngleV(float rd)
 {
 	// zero base radian
-	float zbr = -1 * rd + MATH_FLOAT_PI / 2;
+	float zbr = +1 * rd + MATH_FLOAT_PI / 2;
 	float angle = RadToDegree(zbr);
 
-	if (rd < -1 * MATH_FLOAT_PI / 2)
+	if (rd > +1 * MATH_FLOAT_PI / 2)
 		angle = 180;
 
-	if (rd > +1 * MATH_FLOAT_PI / 2)
+	if (rd < -1 * MATH_FLOAT_PI / 2)
 		angle = 0;
 
 	return (byte)angle;
@@ -119,13 +119,13 @@ byte calcRadianToAngleV(float rd)
 byte calcRadianToAngleH(float rd)
 {
 	// zero base radian
-	float zbr = +1 * rd + MATH_FLOAT_PI / 2;
+	float zbr = -1 * rd + MATH_FLOAT_PI / 2;
 	float angle = RadToDegree(zbr);
 
-	if (rd < -1 * MATH_FLOAT_PI / 2)
+	if (rd > +1 * MATH_FLOAT_PI / 2)
 		angle = 180;
 
-	if (rd > +1 * MATH_FLOAT_PI / 2)
+	if (rd < -1 * MATH_FLOAT_PI / 2)
 		angle = 0;
 
 	return (byte)angle;

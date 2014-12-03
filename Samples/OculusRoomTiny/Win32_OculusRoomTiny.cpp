@@ -65,11 +65,11 @@ Ptr<Buffer>			VideoCapVB;
 Ptr<Buffer>			VideoCapIB;
 //VideoCaptureDevice	VideoCapturingDevice;
 cv::VideoCapture	Capture1(0);
-//cv::VideoCapture	Capture2(1);
+cv::VideoCapture	Capture2(1);
 cv::Mat				CvMat1;
-//cv::Mat				CvMat2;
+cv::Mat				CvMat2;
 cv::Mat				InputMat1;
-//cv::Mat				InputMat2;
+cv::Mat				InputMat2;
 XbeeController		SerialPort;
 #endif
 
@@ -188,10 +188,10 @@ int Init()
 	VideoCapIB = *pRender->CreateBuffer();
 	VideoCapIB->Data(Buffer_Index, CubeIndices, sizeof(CubeIndices));
 	
-	Capture1.set(CV_CAP_PROP_FRAME_WIDTH,  720); 
-	Capture1.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
-//	Capture2.set(CV_CAP_PROP_FRAME_WIDTH,  720);
-//	Capture2.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
+	Capture1.set(CV_CAP_PROP_FRAME_WIDTH,  360); 
+	Capture1.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
+	Capture2.set(CV_CAP_PROP_FRAME_WIDTH,  360);
+	Capture2.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
 	#endif
 
 	// initialize com port
@@ -365,7 +365,7 @@ void ProcessAndRender()
                                          pRendertargetTexture->GetHeight() ));  
         pRender->Clear();
 
-		#if VIDEO_CAPTURE
+		#if !VIDEO_CAPTURE
 		//VideoCapturingDevice.videoCapture();
 		Capture1 >> CvMat1;
 		cv::cvtColor(CvMat1, InputMat1, CV_RGB2BGRA);
@@ -381,7 +381,7 @@ void ProcessAndRender()
             ovrEyeType eye = HMD->EyeRenderOrder[eyeIndex];
             eyeRenderPose[eye] = ovrHmd_GetEyePose(HMD, eye);
 
-			#if !VIDEO_CAPTURE
+			#if VIDEO_CAPTURE
 			//VideoCapturingDevice.videoCapture();
 			if (eyeIndex == 0)
 			{
@@ -391,9 +391,9 @@ void ProcessAndRender()
 			}
 			else
 			{
-				//Capture2 >> CvMat2;
-				//cv::cvtColor(CvMat2, InputMat2, CV_RGB2BGRA);
-				//pVideoCaptureTexture->UpdateVideoCapture(&InputMat2);
+				Capture2 >> CvMat2;
+				cv::cvtColor(CvMat2, InputMat2, CV_RGB2BGRA);
+				pVideoCaptureTexture->UpdateVideoCapture(&InputMat2);
 			}
 
 			ShaderFill videoCaptureShaderFill(VideoCapShaders);
@@ -506,7 +506,7 @@ void Release(void)
 	#if VIDEO_CAPTURE
 	if (pVideoCaptureTexture) pVideoCaptureTexture->Release();
 	Capture1.release();
-//	Capture2.release();
+	Capture2.release();
 	VideoCapVB.Clear();
 	VideoCapIB.Clear();
 	VideoCapShaders->UnsetShader(Shader_Vertex);
