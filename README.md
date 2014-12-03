@@ -2,82 +2,114 @@ Oculus-FPV-with-VR
 ==================
 
 Oculus First Private View with Virtual Reality based on Oculus Tiny, using VC++, Xbee, Arduino Tech Set.
+The real image is captured through the stereo camera, Oculus HMD will show these image.
 
 ##Index
-1. Identifies your users, and tracks the way they engage with your website or application
-2. Stores your users' behavioural data in a scalable "event data warehouse" you control: in Amazon S3 and (optionally) Amazon Redshift or Postgres
-3. Lets you leverage the biggest range of tools to analyse that data incl. big data toolset (e.g. Hive, Pig, Mahout) via EMR or more traditional tools e.g. Tableau, R, Chartio to analyse that behavioural data
+1. Visual C++ & DirectX HLSL
+2. Arduino Servo and Xbee Controller
+3. Fixtures used in this sample
 
-**To find out more, please check out the [Snowplow website] [website] and the [Snowplow wiki] [wiki].**
+**To find out more, please check out the [website] 
 
-## Snowplow technology 101
+## Visual C++ & DirectX HLSL
+Since DirectX require 3D programing technique even if it's simple 2D image rendering, this sample use DirectX and HLSL code to display Video image.
 
-The repository structure follows the conceptual architecture of Snowplow, which consists of five loosely coupled stages:
+Key part is bellow.
 
-![architecture] [architecture-image]
+''''c
+	// Shader vertex format
+	D3D11_INPUT_ELEMENT_DESC VideoCaptureVertexDesc[] = {
+			{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,    0,  0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+			{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,       0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+			{ "COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 20, D3D11_INPUT_PER_VERTEX_DATA, 0 }};
 
-To briefly explain these five sub-systems:
+	// Video Capture vertex shader
+	const char* BackGroundVertexShaderSrc =
+		"struct VS_INPUT {\n"
+		"	float4 m_vPosition : POSITION;\n"
+		"	float2 m_vTexcoord : TEXCOORD;\n"
+		"	float4 m_vColor    : COLOR;\n"
+		"};\n"
+		"struct VS_OUTPUT {\n"
+		"	float4 m_vPosition : SV_POSITION;\n"
+		"	float2 m_vTexcoord : TEXCOORD;\n"
+		"	float4 m_vColor    : COLOR;\n"
+		"};\n"
+		"float4x4 Projection;\n"
+		"VS_OUTPUT main(VS_INPUT Input) {\n"
+		"	VS_OUTPUT Output;\n"
+		"	Output.m_vPosition = mul(Projection, Input.m_vPosition);\n"
+		"	Output.m_vTexcoord = Input.m_vTexcoord;\n"
+		"	Output.m_vColor = Input.m_vColor;\n"
+		"	return Output;\n"
+		"}\n";
 
-* **Trackers** fire Snowplow events. Currently we have 12 trackers, covering web, mobile, desktop, server and IoT
-* **Collectors** receive Snowplow events from trackers. Currently we have three different event collectors, sinking events either to Amazon S3 or Amazon Kinesis
-* **Enrich** cleans up the raw Snowplow events, enriches them and puts them into storage. Currently we have a Hadoop-based enrichment process, and a Kinesis-based process
-* **Storage** is where the Snowplow events live. Currently we store the Snowplow events in a flatfile structure on S3, and in the Redshift and Postgres databases
-* **Analytics** are performed on the Snowplow events. Currently we have a set of recipes and cubes as SQL views for both Redshift and Postgres, and an online cookbook of ad hoc analyses that work with Redshift, Postgres and Hive. We also have data models for [Looker] [looker] in LookML
+	// Video Capture pixel shader
+	static const char* BackGroundPixelShaderSrc =
+		"struct VS_OUTPUT {\n"
+		"	float4 m_vPosition : SV_POSITION;\n"
+		"	float2 m_vTexcoord : TEXCOORD;\n"
+		"	float4 m_vColor    : COLOR;\n"
+		"};\n"
+		"Texture2D			g_txDiffuse : register(t0);\n"
+		"SamplerState		g_samLinear : register(s0);\n"
+		"float4 main(VS_OUTPUT Input) : SV_TARGET{\n"
+		"	return g_txDiffuse.Sample(g_samLinear, Input.m_vTexcoord);\n"
+		"}\n";
+		
+''''
 
-**For more information on the current Snowplow architecture, please see the [Technical architecture] [architecture-doc]**.
+The way of vertex definition for Video Capture image is bellow. The CounterClockwise parameter should be FALSE, when CreateRasterizerState method is executed(default is FALSE).
+''''c
+	const VideoCapVertex CapVertex[] = {
+			{ { -1.0f, 1.0f, 0.0f }, { 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
+			{ {  1.0f, 1.0f, 0.0f }, { 1.0f, 0.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
+			{ { -1.0f,-1.0f, 0.0f }, { 0.0f, 1.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
+			{ { -1.0f,-1.0f, 0.0f }, { 0.0f, 1.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
+			{ {  1.0f, 1.0f, 0.0f }, { 1.0f, 0.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
+			{ {  1.0f,-1.0f, 0.0f }, { 1.0f, 1.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } } };		
+''''
 
-## Find out more
 
-| **[Technical Docs] [techdocs]**     | **[Setup Guide] [setup]**     | **[Roadmap] [roadmap]**           | **[Contributing] [contributing]**           |
-|-------------------------------------|-------------------------------|-----------------------------------|---------------------------------------------|
-| [![i1] [techdocs-image]] [techdocs] | [![i2] [setup-image]] [setup] | [![i3] [roadmap-image]] [roadmap] | [![i4] [contributing-image]] [contributing] |
+## Arduino Servo and Xbee Controller 
+Check Oculus_ex_lcd.ino, this program is assumed to use Arduino UNO, Arduino Shield, and Xbee.
+The "ArduinoXbeeLibrary" source code is required when compile "Oculus_ex_lcd.ino".
+More Information for this source code see [xbee].
 
-## Contributing
 
-We're committed to a loosely-coupled architecture for Snowplow and would love to get your contributions within each of the five sub-systems.
+##Fixtures used in this sample
 
-If you would like help implementing a new tracker, adding an additional enrichment or loading Snowplow events into an alternative database, check out our **[Contributing] [contributing]** page on the wiki!
+The fixtures used this sample is bellow.
 
-## Questions or need help?
+| No | Item                         | Qty | Description                  |
+| ---|:----------------------------:| ---:|-----------------------------:|
+| 1  | Arduino UNO                  | 1   |                              |
+| 2  | Arduino Wireless SD Shield   | 1   |                              |
+| 3  | LCD Character Display        | 1   | SD1602HULB(-XA-G-G)          |
+| 4  | XBeeZB Module                | 2   | To R/S Headtraking Info      |
+| 5  | USB Explore for XBee         | 1   |                              |
+| 6  | Camera                       | 2   | 2SW-410AM00C000              |
+| 7  | Tranmitter                   | 2   | TS 351 Wireless Transmitter  |
+| 8  | Reciever                     | 2   | RC305 Wireless Reciever      |
+| 9  | USB Mpeg Capture             | 2   | Buffalo PC-SDVD/U2G          |
 
-Check out the **[Talk to us] [talk-to-us]** page on our wiki.
 
-## Copyright and license
+* **Camera** The Camera of FOV used in this sample is 90 degree. But FOV used in distortion is around 110. It's better to syncronize the FOV to get better presence.
 
-Snowplow is copyright 2012-2013 Snowplow Analytics Ltd.
+* **Resolution** Although the resolution for the Camera is 780*480, the program set 360*240 resolution because of USB bandwith issue.
+''''c
+	Capture1.set(CV_CAP_PROP_FRAME_WIDTH,  360); 
+	Capture1.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
+''''
 
-Licensed under the **[Apache License, Version 2.0] [license]** (the "License");
-you may not use this software except in compliance with the License.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+[website]: https://achychy911.wordpress.com
+[xbee]:http://www.geocities.jp/bokunimowakaru/
 
-[website]: http://snowplowanalytics.com
-[wiki]: https://github.com/snowplow/snowplow/wiki
-[architecture-image]: https://d3i6fms1cm1j0i.cloudfront.net/github-wiki/images/technical-architecture.png
-[architecture-doc]: https://github.com/snowplow/snowplow/wiki/Technical-architecture
-[talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
-[contributing]: https://github.com/snowplow/snowplow/wiki/Contributing
-[license]: http://www.apache.org/licenses/LICENSE-2.0
-[setup]: https://github.com/snowplow/snowplow/wiki/Setting-up-SnowPlow
-[tech-docs]: https://github.com/snowplow/snowplow/wiki/SnowPlow%20technical%20documentation
-[tracker-protocol]: https://github.com/snowplow/snowplow/wiki/snowplow-tracker-protocol
-[collector-logs]: https://github.com/snowplow/snowplow/wiki/Collector-logging-formats
-[data-structure]: https://github.com/snowplow/snowplow/wiki/canonical-event-model
-[looker]: http://www.looker.com/
 
-[techdocs-image]: https://d3i6fms1cm1j0i.cloudfront.net/github/images/techdocs.png
-[setup-image]: https://d3i6fms1cm1j0i.cloudfront.net/github/images/setup.png
-[roadmap-image]: https://d3i6fms1cm1j0i.cloudfront.net/github/images/roadmap.png
-[contributing-image]: https://d3i6fms1cm1j0i.cloudfront.net/github/images/contributing.png
 
-[techdocs]: https://github.com/snowplow/snowplow/wiki/SnowPlow-technical-documentation
-[setup]: https://github.com/snowplow/snowplow/wiki/Setting-up-SnowPlow
-[roadmap]: https://github.com/snowplow/snowplow/wiki/Product-roadmap
-[contributing]: https://github.com/snowplow/snowplow/wiki/Contributing
+
+
 
 
 
