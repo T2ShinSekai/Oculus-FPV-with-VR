@@ -16,7 +16,7 @@ Since DirectX require 3D programing technique even if it's simple 2D image rende
 
 Key part is bellow.
 
-''''c
+~~~~c
 	// Shader vertex format
 	D3D11_INPUT_ELEMENT_DESC VideoCaptureVertexDesc[] = {
 			{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,    0,  0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
@@ -57,10 +57,10 @@ Key part is bellow.
 		"	return g_txDiffuse.Sample(g_samLinear, Input.m_vTexcoord);\n"
 		"}\n";
 		
-''''
+~~~~
 
 The way of vertex definition for Video Capture image is bellow. The CounterClockwise parameter should be FALSE, when CreateRasterizerState method is executed(default is FALSE).
-''''c
+~~~~c
 	const VideoCapVertex CapVertex[] = {
 			{ { -1.0f, 1.0f, 0.0f }, { 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
 			{ {  1.0f, 1.0f, 0.0f }, { 1.0f, 0.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
@@ -68,7 +68,7 @@ The way of vertex definition for Video Capture image is bellow. The CounterClock
 			{ { -1.0f,-1.0f, 0.0f }, { 0.0f, 1.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
 			{ {  1.0f, 1.0f, 0.0f }, { 1.0f, 0.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } },
 			{ {  1.0f,-1.0f, 0.0f }, { 1.0f, 1.0f }, { 1.0f, 1.0f, 1.0f, 0.0f } } };		
-''''
+~~~~
 
 
 ## Arduino Servo and Xbee Controller 
@@ -97,10 +97,10 @@ The fixtures used this sample is bellow.
 * **Camera** The Camera of FOV used in this sample is 90 degree. But FOV used in distortion is around 110. It's better to syncronize the FOV to get better presence.
 
 * **Resolution** Although the resolution for the Camera is 780*480, the program set 360*240 resolution because of USB bandwith issue.
-''''c
+~~~~c
 	Capture1.set(CV_CAP_PROP_FRAME_WIDTH,  360); 
 	Capture1.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
-''''
+~~~~
 
 
 [website]: https://achychy911.wordpress.com
